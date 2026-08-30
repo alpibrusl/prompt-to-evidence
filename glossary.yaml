@@ -148,3 +148,13 @@ concepts:
       doesn't, regardless of how precise the headline number looks.
     depends_on: ["point estimate", "noise"]
     defined_in: 10
+
+  # ─── Chapter 11 — A Chart Is a Claim ─────────────────────────────────────
+  - term: "aggregation"
+    definition: >-
+      A single summary value standing in for many underlying ones — a
+      monthly average standing in for thirty days of real numbers, an
+      overall trend line standing in for several groups that may not be
+      moving together at all.
+    depends_on: ["noise"]
+    defined_in: 11
