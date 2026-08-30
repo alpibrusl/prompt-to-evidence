@@ -14,6 +14,14 @@ The path runs: a question, then data, then a method applied to that data, then a
 
 You have almost certainly done this kind of work before, in a spreadsheet, and trusted the result — because in a spreadsheet, the method is usually just arithmetic, and arithmetic is easy to check by eye. `=AVERAGE(B2:B40)` either looks right or it does not; you can glance at the range and know if it's the wrong column. What an agent can now do that Excel never asked of you is run an actual statistical comparison, fit an actual model, compute an actual causal estimate — categories of calculation where "does it look right" stops being something you can judge by glancing at the formula bar. The number gets harder to eyeball exactly as the machinery producing it gets more capable. That gap is this book.
 
+## This is not like checking a formula
+
+One comfort from spreadsheet work has to be set aside now, early, because holding onto it will mislead you for the rest of this book: a formula is either right or wrong, and checking it means finding the mistake. `=SUM(B2:B40)` either sums the correct range or it doesn't — fix it, and it's fixed, completely, for good, for this data.
+
+Almost nothing else in this book works that way, and it's worth being honest about that before going any further. A statistical comparison, a measured impact, a prediction — these are not answers waiting to be checked against a known correct value the way a formula is. They are estimates, built from limited data, carrying real uncertainty that doesn't disappear no matter how carefully the method was applied. Two people can both do everything in this book correctly and still land on different numbers from the same data — a different but equally defensible way of handling an outlier, a slightly different time window — without either one having made a mistake.
+
+That is not a gap better tools will eventually close. It is the actual difference between measuring something in the world, where the truth is only partly visible through whatever data you happened to collect, and checking a calculation, where the truth is fixed and just has to be located. Chapter 10 is entirely about the shape this takes in practice — a range instead of a single point, and what to do with one honestly. For now, the thing worth carrying forward is smaller: stop expecting a single correct answer to fall out of an analysis the way one falls out of a spreadsheet formula, and most of what follows will make a great deal more sense.
+
 ## Two kinds of wrong
 
 There is the kind of wrong you can see. A formula pointing at the wrong column, a chart with no data in it, a percentage above 100. You look, you notice, you fix it. This kind is not really the subject here — you already know how to catch it, because you have been catching it in spreadsheets for years.

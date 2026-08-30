@@ -28,7 +28,19 @@ Chapter 7 promised this moment would arrive again, and here it is: a model repor
 
 Before trusting a sophisticated model, ask what the simplest possible approach would have scored — always predicting the average, always predicting last month's number, whatever the laziest reasonable guess would be. If the sophisticated model barely beats that baseline, the complexity is not paying for itself: it is harder to explain, harder to maintain, and easier to get subtly wrong, for a gain that may not be real once you account for how imprecisely it was measured (Chapter 10). A model earns the right to be complicated by clearly beating the boring alternative, not by existing.
 
+## Keep a record of every attempt
+
+Building a model is rarely one attempt. It's five, or twenty — different features, different algorithms, different ways of handling the same messy column — and whichever version ships is whichever one scored best among however many were tried. That's completely normal. It is also, unremarked, the exact multiple-comparisons problem from Chapter 8: test enough variations against the same data and one of them tends to look good by chance alone, the same way testing twenty metrics on an A/B test tends to turn up one significant-looking result even when nothing real is happening anywhere.
+
+**Experiment tracking** is keeping a record of every attempt — what changed about it, what it scored, on which held-out data — not just the one that won. Purpose-built tools for this exist and are common in ML work (MLflow and similar experiment-tracking tools are the usual names); using one is a reasonable habit, and which specific one is beside the point this book cares about. A spreadsheet with one row per attempt does the identical job for a smaller effort, if that's genuinely all the scale in front of you calls for. The practice is what matters, not the product.
+
+What the record actually buys you: when the winning model scores unusually well, it tells you whether it beat a field of twenty attempts by a real margin, or whether it simply got lucky on this one split among many tries — a question the suspicious-accuracy check two sections up cannot answer on its own without knowing how many attempts were made to get there. Two models tried, with a clear winner, and twenty tried, with the best one ahead by a hair, are very different situations wearing the same headline number. Only a record tells you which one you're actually looking at.
+
 ## What to ask for
+
+> "How many different versions of this were tried before this one, and what did each one score? Show me all of them, not just the winner."
+
+Turns the multiple-comparisons question from Chapter 8 into one you can actually ask about a model, and makes an unusually good score interpretable rather than just impressive-sounding.
 
 > "Is this a batch model or an online one — will it run on a schedule I control, or will it be making live decisions inside a running system?"
 
