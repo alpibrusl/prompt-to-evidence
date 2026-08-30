@@ -92,6 +92,16 @@ concepts:
     depends_on: ["parameter"]
     defined_in: 7
 
+  - term: "consistency check"
+    definition: >-
+      Asking whether a result agrees with something else already known,
+      arrived at a different way — a related number, an independent report,
+      the surrounding trend. The scalable form of suspicion: run
+      continuously on every result, not just the extreme-looking ones,
+      without needing to re-derive anything from scratch.
+    depends_on: ["known-answer test"]
+    defined_in: 7
+
   # ─── Chapter 8 — Comparing Two Things Fairly ─────────────────────────────
   - term: "random assignment"
     aka: ["randomization"]

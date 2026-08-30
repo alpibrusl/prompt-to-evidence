@@ -25,7 +25,8 @@ Before a number drives a real decision. Grouped by what each part protects again
 
 ### Not fooling yourself
 
-- [ ] An unusually good or unusually bad result was checked for a bug or data problem before it was believed (Chapter 7).
+- [ ] The result passed a consistency check against something else already known — not only checked because it looked unusual (Chapter 7).
+- [ ] An unusually good or unusually bad result specifically was checked for a bug or data problem before it was believed (Chapter 7).
 - [ ] The comparison was genuinely fair — random assignment, or a clearly named reason it wasn't possible (Chapter 8).
 - [ ] Anything else that changed at the same time has been considered, not just the thing you're hoping gets the credit (Chapter 9).
 - [ ] You have a range, not just a headline number — and it's narrow enough to actually decide with (Chapter 10).
@@ -49,7 +50,7 @@ If that's too much to hold at once, five items carry most of the value, each ans
 
 1. **Was it computed with real code, shown, not narrated?**
 2. **Was it tested against a known answer before being trusted on the real one?**
-3. **Was an unusually good or bad result checked for a bug before being believed?**
+3. **Does it survive a consistency check against something else you already know — not just checked if it looked unusual?**
 4. **Do you have a range, not just a number?**
 5. **Has the data actually been looked at, not just assumed to be fine?**
 

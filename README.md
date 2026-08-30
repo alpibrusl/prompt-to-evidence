@@ -30,7 +30,7 @@ fills that gap.
 | **IV** | Seeing and Learning | A chart is a claim · when the agent wants to build a model · data you can trust |
 | **V** | Working With the Agent | Asking the right question · the minimum bar |
 
-**Status: complete draft.** All 15 chapters written; ~16,000 words, 23 defined terms, 73 pages.
+**Status: complete draft.** All 15 chapters written; ~16,300 words, 24 defined terms, 75 pages.
 
 ## The four rules
 
@@ -44,10 +44,13 @@ of decision:
 3. **Use established, heavily-used libraries over reimplemented statistics**
    — the same supply-chain trust logic as *Prompt to Production* chapter 2,
    aimed at numerical correctness instead of security.
-4. **Test against a case where you already know the answer, and be
-   suspicious of extreme results in both directions** — a suspiciously
-   perfect number and a suspiciously terrible one get the same treatment:
-   stop and look for a bug before you believe either one.
+4. **Test against a case where you already know the answer, and stay
+   suspicious of every result, not just the extreme-looking ones** — the
+   scalable version is a consistency check: does this agree with something
+   else you already know? A suspiciously perfect number and a suspiciously
+   terrible one both fail that check loudly; an ordinary-looking wrong
+   number just fails it quietly, which is exactly why the check has to run
+   on everything, not only on what already looks wrong.
 
 ## The book is source
 

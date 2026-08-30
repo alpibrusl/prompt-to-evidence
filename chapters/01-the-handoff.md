@@ -82,7 +82,7 @@ The same list appears in full at the end of the book, as Chapter 15, with the re
 
 **Part I — The Ground.** Where this chapter sits: what a number is versus what evidence is, where data actually comes from, and the shape a trustworthy analysis takes from question to decision.
 
-**Part II — Trusting the Number.** The four rules this whole book rests on: force computation instead of guessing, build the general tool rather than a one-off script, reach for established libraries instead of reimplementing statistics by hand, and test against a case you already know the answer to — with a healthy suspicion of results that look too good.
+**Part II — Trusting the Number.** The four rules this whole book rests on: force computation instead of guessing, build the general tool rather than a one-off script, reach for established libraries instead of reimplementing statistics by hand, and test against a case you already know the answer to — with suspicion as the default for every result, not just the ones that already look wrong.
 
 **Part III — Making the Decision.** The two concrete situations that brought you here: comparing two things fairly, and measuring whether something you did actually caused what followed. Plus the uncertainty that sits underneath both.
 

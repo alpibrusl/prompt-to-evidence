@@ -28,10 +28,12 @@ applies them to a specific kind of decision:
 3. Use established, heavily-used libraries over reimplemented statistics —
    the same supply-chain trust logic as *Prompt to Production* chapter 2,
    aimed at numerical correctness instead of security.
-4. Test against a case where you already know the answer, and be suspicious
-   of extreme results in *both* directions — a suspiciously perfect number
-   and a suspiciously terrible one get the same treatment: stop and look for
-   a bug before you believe either one.
+4. Test against a case where you already know the answer, and stay
+   suspicious of every result, not just the extreme-looking ones — the
+   scalable version is a consistency check: does this agree with something
+   else already known? Extreme results just fail that check loudly; an
+   ordinary-looking wrong number fails it quietly, which is why the check
+   has to run on everything.
 
 ## Author identity — do not guess
 

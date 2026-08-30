@@ -10,9 +10,17 @@ This is precisely why Chapter 5 insisted on a tool with parameters rather than a
 
 Building the known case does not need to be elaborate. Five made-up rows where you can compute the average by hand. A month of last year's real numbers where you already remember roughly what happened. A textbook example with a published answer. The bar is not rigor — it's simply *having something to check against*, which is a bar almost every real analysis currently clears zero times.
 
+## Suspicion is not a special mode
+
+Extreme results are not the only ones worth doubting. They are simply the ones that announce themselves — startling enough to trigger doubt without you having to go looking for it. An ordinary, unremarkable-looking number can be wrong for exactly the same reasons — a leak, a bug, an unfair comparison — and it gets a pass for no better reason than that it happened to land somewhere plausible. The honest posture is not *trust it unless something about it looks extreme*. It's suspicion as the default setting for every result, and what an extreme one actually earns is not a monopoly on scrutiny — only how loudly it demands it.
+
+Constant suspicion sounds exhausting, and would be, if it meant re-deriving every number from first principles. It doesn't have to. The workable version is the same discipline as the known-answer test above, run continuously instead of once: a **consistency check** — does this result agree with something else you already know, arrived at a different way? Does this month's number sit near the trend the surrounding months have been showing, even though nothing about it looks dramatic on its own? Does a total match the sum of its parts, computed independently? Does it roughly match what a colleague, a different report, or your own general sense of the business would have predicted before seeing it? When two things that should roughly agree don't, that disagreement deserves exactly the attention an extreme result gets — even though neither number, looked at alone, seemed wrong.
+
+This is deliberately more sustainable than treating distrust as an occasional event reserved for outliers. A consistency check needs no particular expertise. The question is simply *does this agree with that*, and a mismatch is the finding, regardless of which of the two you would have been inclined to trust more going in.
+
 ## Suspicion cuts both ways
 
-There is a specific moment worth naming, because it is exactly when people stop being careful: the result comes back, and it's either much better than expected or much worse — and one of those two reactions is celebration, and the other is despair, and neither one is *checking*.
+One instance of this is common enough, and easy enough to get exactly backwards, that it earns its own name: the result comes back, and it's either much better than expected or much worse — and one of those two reactions is celebration, and the other is despair, and neither one is *checking*.
 
 Treat both the same way. **A suspiciously good result and a suspiciously bad result get identical treatment: stop, and look for a bug or a data problem before you believe either one.**
 
@@ -22,9 +30,7 @@ The failure mode to watch for in yourself is asymmetric relief: quietly re-check
 
 ## What checking actually looks like
 
-Chapter 3 already gave you the diagnostic habit — the *shape* of a wrong-feeling result points at a different link in the chain. This chapter is where you actually use it: a suspiciously good result, check the data and the assumptions behind the method first — something is probably leaking into the answer that shouldn't be there. A suspiciously bad one, check the computation first — something in the arithmetic likely broke.
-
-Alongside that, one plain habit worth having regardless: does the number's *size* make sense given what you already know about the situation, independent of any formal test? A conversion lift of thirty percent from changing a button's colour should not sit comfortably next to everything else you know about how much small design changes typically move a number. That discomfort is data. It is not proof of an error, but it is a completely legitimate reason to run the known-answer test before you act on the result, rather than after.
+Chapter 3 already gave you the diagnostic habit — the *shape* of a wrong-feeling result points at a different link in the chain. For the extreme case specifically: a suspiciously good result, check the data and the assumptions behind the method first — something is probably leaking into the answer that shouldn't be there. A suspiciously bad one, check the computation first — something in the arithmetic likely broke. For an ordinary-looking result that simply failed a consistency check, the diagnostic habit is the same one, applied more broadly: find the specific link where the two disagreeing numbers diverge, rather than assuming the newer or less-trusted one is automatically the culprit.
 
 ## What to ask for
 
@@ -34,8 +40,8 @@ The default request — not something reserved for results that already look sus
 
 > "This result seems unusually [good / bad] compared to what we'd normally expect. Before I act on it, check for a bug or a data problem — don't just re-explain why the number makes sense."
 
-The direct instruction for the moment this chapter is really about. Asking it to "explain" a suspicious result invites a plausible-sounding story; asking it to check invites an actual answer.
+The extreme-result instruction. Asking it to "explain" a suspicious result invites a plausible-sounding story; asking it to check invites an actual answer.
 
-> "Does this number's size make sense compared to similar things we've measured before? If not, why not?"
+> "Even though this doesn't look unusual, does it agree with [a related number, a different report, last period's trend]? If they don't roughly match, find out why before either one gets used."
 
-The sniff test, asked out loud rather than left as a private, easily-dismissed feeling.
+The consistency check, asked routinely rather than only when something already feels wrong — which is the actual point of this chapter, not just the extreme-result case.
