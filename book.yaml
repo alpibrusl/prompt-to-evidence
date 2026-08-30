@@ -1,0 +1,61 @@
+title: "Prompt to Evidence"
+subtitle: "The data literacy your AI agent assumes you already know"
+author:
+  name: "Alfonso Sastre"
+  bio: >-
+    Alfonso Sastre is a theoretical physicist by training. His PhD and four
+    years of postdoctoral research were in lattice QCD, a field where the
+    physics comes out of large-scale simulation — which meant writing
+    high-performance code and analysing the data it produced. Since 2015 he has
+    worked as a data scientist in travel, banking and electric mobility.
+language: en
+output: "prompt-to-evidence.epub"
+
+copyright:
+  year: "2026"
+  license: "CC BY-NC 4.0"
+  license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
+  notice:
+    - >-
+      Written with the assistance of an AI agent, which is the only honest way
+      to write this particular book. Every claim in it is the author's to defend.
+
+theme:
+  base_font: serif
+  page_size: 6x9
+  font_size_pt: 11.0
+  stylesheet: "style.css"
+  stylesheet_mode: extend
+
+chapters:
+  # `title` overrides each chapter's own H1 for the rendered heading and TOC
+  # entry, prefixing "Chapter N" — see CLAUDE.md and the equivalent
+  # convention in prompt-to-production's book.yaml. The Markdown source
+  # keeps its own plain H1.
+  # Part I — The Ground
+  - { file: chapters/01-the-handoff.md,                title: "Chapter 1 — The Handoff" }
+  - { file: chapters/02-where-your-data-lives.md,       title: "Chapter 2 — Where Your Data Actually Lives" }
+  - { file: chapters/03-the-shape-of-an-analysis.md,    title: "Chapter 3 — The Shape of an Analysis" }
+  # Part II — Trusting the Number
+  - { file: chapters/04-make-it-compute-not-guess.md,   title: "Chapter 4 — Make It Compute, Not Guess" }
+  - { file: chapters/05-the-tool-not-the-answer.md,      title: "Chapter 5 — The Tool, Not the Answer" }
+  - { file: chapters/06-borrowed-not-reinvented.md,      title: "Chapter 6 — Borrowed, Not Reinvented" }
+  - { file: chapters/07-test-it-against-what-you-know.md, title: "Chapter 7 — Test It Against What You Already Know" }
+  # Part III — Making the Decision
+  - { file: chapters/08-comparing-two-things-fairly.md, title: "Chapter 8 — Comparing Two Things Fairly" }
+  - { file: chapters/09-measuring-what-you-did.md,      title: "Chapter 9 — Measuring What You Did" }
+  - { file: chapters/10-confidence-not-certainty.md,    title: "Chapter 10 — Confidence, Not Certainty" }
+  # Part IV — Seeing and Learning
+  - { file: chapters/11-a-chart-is-a-claim.md,          title: "Chapter 11 — A Chart Is a Claim" }
+  - { file: chapters/12-when-the-agent-wants-to-build-a-model.md, title: "Chapter 12 — When the Agent Wants to Build a Model" }
+  - { file: chapters/13-data-you-can-trust.md,          title: "Chapter 13 — Data You Can Trust" }
+  # Part V — Working With the Agent
+  - { file: chapters/14-asking-the-right-question.md,   title: "Chapter 14 — Asking the Right Question" }
+  - { file: chapters/15-the-minimum-bar.md,             title: "Chapter 15 — The Minimum Bar" }
+
+front_matter: [title_page, copyright, toc]
+
+back_matter:
+  # Generated from glossary.yaml by `make glossary` — do not edit by hand.
+  - { file: GLOSSARY.md, title: "Glossary" }
+  - about_author

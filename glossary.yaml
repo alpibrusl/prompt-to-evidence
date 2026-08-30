@@ -1,0 +1,34 @@
+# The concept ledger for "Prompt to Evidence".
+#
+# This is the book's canon: every piece of jargon it teaches, the ONE definition
+# it commits to, and the ONE analogy it uses for that idea throughout. Chapters
+# are written against this file; `make check` lints the manuscript against it.
+#
+# Structurally identical to prompt-to-production's glossary.yaml — same tooling,
+# same discipline, different subject.
+#
+#   term        the canonical name
+#   aka         synonyms and near-misses the reader will meet elsewhere
+#   definition  the one plain-language definition (used verbatim in the glossary)
+#   analogy     the metaphor this book commits to and never contradicts
+#   depends_on  terms that must already be defined for this one to make sense
+#   defined_in  the chapter that introduces it
+
+kind: technical
+title: "Prompt to Evidence"
+
+concepts:
+
+  # ─── Chapter 1 — The Handoff ────────────────────────────────────────────
+  - term: "number"
+    definition: >-
+      A value that came out of a calculation. Not, by itself, a reason to
+      believe anything.
+    defined_in: 1
+
+  - term: "evidence"
+    definition: >-
+      A result you could defend to someone who doubts it — someone who asks
+      how you know, and expects an answer that survives the question.
+    depends_on: ["number"]
+    defined_in: 1
