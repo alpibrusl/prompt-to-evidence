@@ -193,3 +193,13 @@ concepts:
       cases it genuinely hasn't seen.
     depends_on: ["known-answer test", "overfitting"]
     defined_in: 12
+
+  # ─── Chapter 13 — Data You Can Trust ─────────────────────────────────────
+  - term: "data profiling"
+    definition: >-
+      Checking the basic shape of a dataset before analysing it — how much
+      is missing per column, what the actual unique values in a category
+      field are, the min and max of a numeric one — to catch a corrupted
+      or inconsistent dataset before it quietly shapes every result built
+      on top of it.
+    defined_in: 13
