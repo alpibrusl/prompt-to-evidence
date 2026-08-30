@@ -81,3 +81,13 @@ concepts:
       does not require reimplementing — or fully understanding — what
       happens inside it.
     defined_in: 6
+
+  # ─── Chapter 7 — Test It Against What You Already Know ──────────────────
+  - term: "known-answer test"
+    aka: ["sanity check"]
+    definition: >-
+      Running a method against a case where the correct result is already
+      known, to check the method itself before trusting it on a case where
+      the answer isn't.
+    depends_on: ["parameter"]
+    defined_in: 7
