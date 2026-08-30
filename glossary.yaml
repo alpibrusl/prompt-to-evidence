@@ -65,3 +65,11 @@ concepts:
       A condition that has to hold about the data for a method's output to
       mean what it claims to mean. Every method has some, stated or not.
     defined_in: 3
+
+  # ─── Chapter 5 — The Tool, Not the Answer ───────────────────────────────
+  - term: "parameter"
+    definition: >-
+      The part of a computation that changes from one run to the next —
+      a month, a segment, a threshold — kept separate from the logic that
+      stays fixed regardless of what value is supplied.
+    defined_in: 5
