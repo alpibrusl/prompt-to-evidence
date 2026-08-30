@@ -63,7 +63,7 @@ You may already be looking at a result — a test, a report, a chart someone bui
 | 4 | If you fed the same method a case where you already knew the true answer, would it get that one right? | Chapter 7 |
 | 5 | Was the result unusually good or unusually bad — and if so, has anyone looked for a bug before believing it? | Chapter 7 |
 | 6 | Does the chart's axis, range, or comparison flatter the story, or would it look the same drawn plainly? | Chapter 11 |
-| 7 | If it's a model — was it ever tested on data it hadn't already seen? | Chapter 12 |
+| 7 | If it's an ML model — was it ever tested on data it hadn't already seen? | Chapter 12 |
 | 8 | Is the underlying data missing anything important, or skewed toward who happened to respond? | Chapter 13 |
 
 Nothing here requires you to run the check yourself. You can ask your agent every one of these questions today and get a direct answer — the pattern of shaky answers tells you where to spend your skepticism, which is rarely the place you'd have guessed.
