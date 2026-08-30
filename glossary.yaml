@@ -114,3 +114,21 @@ concepts:
       probability the effect is real.
     depends_on: ["noise"]
     defined_in: 8
+
+  # ─── Chapter 9 — Measuring What You Did ─────────────────────────────────
+  - term: "counterfactual"
+    definition: >-
+      What would have happened if the thing you did had not happened. Never
+      directly observable — only the world that actually occurred is. Every
+      method for measuring impact is really a way of building a stand-in
+      for the world you didn't get to see.
+    defined_in: 9
+
+  - term: "confound"
+    scan: true
+    definition: >-
+      Something that affects both whether — or when — a change was made
+      and the outcome being measured, creating the appearance of a
+      relationship that isn't really about the change at all.
+    depends_on: ["bias", "counterfactual"]
+    defined_in: 9
