@@ -132,3 +132,19 @@ concepts:
       relationship that isn't really about the change at all.
     depends_on: ["bias", "counterfactual"]
     defined_in: 9
+
+  # ─── Chapter 10 — Confidence, Not Certainty ─────────────────────────────
+  - term: "point estimate"
+    definition: >-
+      The single best-guess number a calculation produces. Real, and always
+      a guess — computed from one particular sample that would have come
+      out slightly different with another sample drawn the same way.
+    defined_in: 10
+
+  - term: "confidence interval"
+    definition: >-
+      A plausible range around a point estimate, not just the one number —
+      narrow when the data pins the answer down precisely, wide when it
+      doesn't, regardless of how precise the headline number looks.
+    depends_on: ["point estimate", "noise"]
+    defined_in: 10

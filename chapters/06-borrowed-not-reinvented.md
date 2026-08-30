@@ -1,6 +1,6 @@
 # Borrowed, Not Reinvented
 
-Ask an agent to compute a correlation, a confidence interval, a regression, and it will very happily write the formula from scratch — clean code, a recognisable structure, a number that comes out the other end looking exactly like it should. Whether that formula is actually correct is a separate question entirely, and "it looks right" is not evidence either way.
+Ask an agent to compute a correlation, a confidence interval (Chapter 10), a regression, and it will very happily write the formula from scratch — clean code, a recognisable structure, a number that comes out the other end looking exactly like it should. Whether that formula is actually correct is a separate question entirely, and "it looks right" is not evidence either way.
 
 ## What a library actually is
 

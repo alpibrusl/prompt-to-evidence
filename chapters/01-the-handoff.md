@@ -45,7 +45,7 @@ It is not withholding caution from you. It is answering precisely. The skill thi
 
 ## What this book is not about
 
-It is not a statistics course, and finishing it will not make you able to derive a confidence interval by hand or explain why a t-distribution has the shape it has. That is real expertise, it takes real time, and this book would be lying if it promised to shortcut it.
+It is not a statistics course, and finishing it will not make you able to derive a confidence interval (Chapter 10) by hand or explain why a t-distribution has the shape it has. That is real expertise, it takes real time, and this book would be lying if it promised to shortcut it.
 
 It is also not about spreadsheets versus code, which tool or library to prefer, or how to build a dashboard — the mechanics move quickly and are not the point. And it does not cover research-grade statistics: clinical trials, academic publication standards, anything where the bar is peer review rather than a decision you are personally accountable for. Those have their own literature, written for that different bar.
 
