@@ -91,3 +91,26 @@ concepts:
       the answer isn't.
     depends_on: ["parameter"]
     defined_in: 7
+
+  # ─── Chapter 8 — Comparing Two Things Fairly ─────────────────────────────
+  - term: "random assignment"
+    aka: ["randomization"]
+    definition: >-
+      Putting each person or unit being compared into one group or another
+      by chance, not by anything about who they are. Spreads every other
+      difference between the groups evenly, so a remaining gap in outcomes
+      is more plausibly caused by the thing being tested.
+    depends_on: ["bias"]
+    defined_in: 8
+
+  - term: "statistical significance"
+    scan: true
+    aka: ["significant"]
+    definition: >-
+      The answer to a precise question — if the two things being compared
+      truly made no difference, how surprising would a gap this size be?
+      Significant means the honest answer is quite surprising. Not a
+      measure of how large or important the effect is, and not the
+      probability the effect is real.
+    depends_on: ["noise"]
+    defined_in: 8
