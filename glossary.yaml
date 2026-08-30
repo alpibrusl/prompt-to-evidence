@@ -158,3 +158,38 @@ concepts:
       moving together at all.
     depends_on: ["noise"]
     defined_in: 11
+
+  # ─── Chapter 12 — When the Agent Wants to Build a Model ──────────────────
+  - term: "batch model"
+    definition: >-
+      A model that runs once, or on a schedule you control, in an
+      environment you control, producing a set of outputs and then
+      stopping until next time — a churn list generated monthly, not a
+      live decision made continuously.
+    defined_in: 12
+
+  - term: "online model"
+    definition: >-
+      A model embedded inside a running system, making predictions
+      continuously and automatically as part of something being actively
+      used, with no human reviewing each individual output before it
+      takes effect.
+    depends_on: ["batch model"]
+    defined_in: 12
+
+  - term: "overfitting"
+    scan: true
+    definition: >-
+      Scoring brilliantly on the exact data a model was built from and
+      considerably worse on anything new — memorising the specific data
+      rather than learning the pattern underneath it.
+    defined_in: 12
+
+  - term: "held-out data"
+    aka: ["test set"]
+    definition: >-
+      A portion of the data set aside and never shown to a model while it
+      is being built, used only afterward to check how it performs on
+      cases it genuinely hasn't seen.
+    depends_on: ["known-answer test", "overfitting"]
+    defined_in: 12
