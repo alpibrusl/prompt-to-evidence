@@ -30,7 +30,7 @@ fills that gap.
 | **IV** | Seeing and Learning | A chart is a claim · when the agent wants to build a model · data you can trust |
 | **V** | Working With the Agent | Asking the right question · the minimum bar |
 
-**Status: complete draft.** All 15 chapters written; ~16,300 words, 24 defined terms, 75 pages.
+**Status: complete draft.** All 15 chapters written; ~16,400 words, 24 defined terms, 76 pages.
 
 ## The four rules
 
