@@ -73,3 +73,11 @@ concepts:
       a month, a segment, a threshold — kept separate from the logic that
       stays fixed regardless of what value is supplied.
     defined_in: 5
+
+  # ─── Chapter 6 — Borrowed, Not Reinvented ───────────────────────────────
+  - term: "library"
+    definition: >-
+      Code someone else already wrote, tested and published, so using it
+      does not require reimplementing — or fully understanding — what
+      happens inside it.
+    defined_in: 6
