@@ -58,3 +58,10 @@ concepts:
       matter — rather than just whichever rows happened to load first.
     depends_on: ["bias"]
     defined_in: 2
+
+  # ─── Chapter 3 — The Shape of an Analysis ───────────────────────────────
+  - term: "assumption"
+    definition: >-
+      A condition that has to hold about the data for a method's output to
+      mean what it claims to mean. Every method has some, stated or not.
+    defined_in: 3
