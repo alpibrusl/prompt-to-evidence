@@ -32,3 +32,29 @@ concepts:
       how you know, and expects an answer that survives the question.
     depends_on: ["number"]
     defined_in: 1
+
+  # ─── Chapter 2 — Where Your Data Actually Lives ─────────────────────────
+  - term: "noise"
+    scan: true
+    definition: >-
+      Random scatter around the true answer. Averages out as you add more
+      data — the reason a bigger sample gives a more precise estimate.
+    defined_in: 2
+
+  - term: "bias"
+    scan: true
+    aka: ["systematic skew"]
+    definition: >-
+      A systematic distortion that every observation carries in the same
+      direction, caused by how the data was collected. More data does not
+      fix it — it only gives a more confident estimate of the wrong thing.
+    depends_on: ["noise"]
+    defined_in: 2
+
+  - term: "representative sample"
+    definition: >-
+      A smaller slice of a dataset built so it still reflects the same mix
+      as the whole — the same proportions of whatever varies in ways that
+      matter — rather than just whichever rows happened to load first.
+    depends_on: ["bias"]
+    defined_in: 2
