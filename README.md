@@ -9,7 +9,7 @@ measuring whether a campaign actually caused the lift it's credited with:
 the reader works comfortably in Excel and wants to go where their data team
 already lives, not become a statistician.
 
-One of two companions to [*Prompt to
+One of three companions to [*Prompt to
 Production*](https://github.com/alpibrusl/prompt-to-production) — same
 voice, same tooling, different subject each time. That book is software
 engineering discipline for people who cannot read code; this one is
@@ -17,7 +17,10 @@ analytical discipline for people who are not mathematicians. Its own
 Chapter 1 explicitly excludes ML and statistical work from scope — this
 book is what fills that gap. The third, [*Prompt to
 Ledger*](https://github.com/alpibrusl/prompt-to-ledger), is financial
-discipline for people who are not accountants.
+discipline for people who are not accountants. The fourth, [*Prompt to
+Decision*](https://github.com/alpibrusl/prompt-to-decision), is the layer
+above all three: deciding whether to act on a recommendation, not just
+verifying it.
 
 > The agent will compute almost any comparison you ask for, and will rarely
 > tell you whether the comparison was a fair one.
@@ -59,7 +62,7 @@ of decision:
 The manuscript is Markdown. The EPUB and PDF are build artifacts — derived
 from the source, never committed, rebuilt on demand. This is
 [bookkit](https://github.com/alpibrusl/content-kit)'s premise, shared with
-this book's companion volume.
+this book's companion volumes.
 
 ```bash
 pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
@@ -89,4 +92,4 @@ mechanics — this repository's tooling is a direct copy, unmodified.
 ## Licence
 
 Manuscript: [CC BY-NC 4.0](COPYING.md). Code: [EUPL-1.2](LICENSE), matching
-content-kit and this book's companion volume. See [COPYING.md](COPYING.md).
+content-kit and this book's companion volumes. See [COPYING.md](COPYING.md).
