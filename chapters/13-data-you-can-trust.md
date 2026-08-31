@@ -4,7 +4,7 @@ Every discipline in this book so far — compute properly, use established libra
 
 ## Missing data is rarely missing at random
 
-An empty cell looks like nothing happened. Often, something happened — the customer who churned stopped answering satisfaction surveys before they left, which means your satisfaction data is systematically short exactly the people you most need to hear from. Filling that gap with an average, or simply ignoring the missing rows, doesn't restore the missing information. It quietly assumes the missing customers looked like the ones who stayed, which is frequently the opposite of true.
+Bellwood's churn model from Chapter 12 makes this concrete. An empty cell in the satisfaction-survey column looks like nothing happened. Often, something happened — the customer who churned stopped answering the survey before they left, which means the satisfaction data is systematically short exactly the people the model most needs to hear from. Filling that gap with an average, or simply ignoring the missing rows, doesn't restore the missing information. It quietly assumes the missing customers looked like the ones who stayed, which is frequently the opposite of true.
 
 This is Chapter 2's bias, in its most common real-world form. The question worth asking about any gap in the data is not just *how much is missing* but *is the reason it's missing related to the very thing being measured* — because if it is, the honest answer contains a hole exactly where the most important information would have been.
 

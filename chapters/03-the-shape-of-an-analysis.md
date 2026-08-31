@@ -1,6 +1,6 @@
 # The Shape of an Analysis
 
-Someone asks for the conversion rate. The agent finds a column that looks right, computes a percentage, and hands it back — clean, plausible, three decimal places of confidence. Only later does it come out that the column counts *added to cart*, not *completed purchase*, and the real conversion rate is a third of what everyone has been discussing in meetings for a week.
+Bellwood's growth team has been burned by this before. Someone asks for the conversion rate, the agent finds a column that looks right, computes a percentage, and hands it back — clean, plausible, three decimal places of confidence. Only later does it come out that the column counted *added to cart*, not *completed purchase*, and the real conversion rate was a third of what everyone had been discussing in meetings for a week. It's the kind of mistake this chapter exists to catch before it reaches a number like the one in Chapter 1.
 
 Nothing broke. Every step ran correctly. The chain connecting the question to the number simply had a weak joint, and a weak joint produces a perfectly well-formed wrong answer.
 

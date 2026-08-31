@@ -56,6 +56,14 @@ If that's too much to hold at once, five items carry most of the value, each ans
 
 Fifteen minutes, most of it just asking.
 
+## What it took, in the end
+
+Chapter 1 opened with a single sentence: Bellwood's agent reported the new checkout page had lifted conversion 12%, and recommended shipping it immediately. Nothing about that sentence was dishonest. It was also not yet true, in the sense this book cares about.
+
+Getting from that sentence to something worth trusting took most of this book. Chapter 3 checked what the number was actually counting. Chapters 4 through 7 made sure it was computed with real code, built as a reusable tool, using an established library, and tested against a case with a known answer — the discipline that has to hold for any number, this one included. Chapter 8 is where the real problem turned up: the new page had never been shown to a random half of visitors at all. It had simply gone live for everyone on March 15, and "conversion is up 12%" meant "the four weeks after March 15 outperformed the four weeks before it" — a real number, honestly computed by then, answering a comparison nobody had actually run. The honest, randomly-assigned retest that followed, and the range Chapter 10 put around it, landed on conversion up 2 percentage points — smaller, real, and nothing like the number that nearly shipped on its own.
+
+Nine chapters between a plausible sentence and an actual answer is not this book being thorough for its own sake. It is what the gap between a number and evidence, named all the way back in Chapter 1, actually costs to close — once, carefully, so it doesn't have to be re-litigated by hand every time a number like it shows up again.
+
 ## What you have
 
 You began this book unable to derive a p-value or explain what a regression is actually doing underneath. That hasn't changed, and it was never the point.

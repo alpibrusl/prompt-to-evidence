@@ -1,6 +1,6 @@
 # Measuring What You Did
 
-Sales rose 18% in the month after the campaign launched. They also rose 15% in the same month the year before, when no campaign existed at all.
+Bellwood's marketing team reports that sales rose 18% in the month after their spring campaign launched. They also rose 15% in the same month the year before, when no campaign existed at all.
 
 That second sentence is the entire chapter. The first one answers a question nobody actually asked — *did anything happen after the campaign* — and the real question, *did the campaign cause it*, is still sitting there unanswered, wearing the first question's clothes.
 

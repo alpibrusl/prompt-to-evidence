@@ -1,6 +1,6 @@
 # The Handoff
 
-You ask the agent whether the new checkout page actually beat the old one. It answers in one sentence: *conversion is up 12%, ship it.* The sentence arrives fast, sounds definite, and reads exactly the way a correct answer would read.
+You ask the agent whether Bellwood's new checkout page actually beat the old one. It answers in one sentence: *conversion is up 12%, ship it.* The sentence arrives fast, sounds definite, and reads exactly the way a correct answer would read.
 
 It might be correct. That is the entire problem this book is about.
 

@@ -1,6 +1,6 @@
 # Comparing Two Things Fairly
 
-Back to the opening example: did the new checkout page actually beat the old one. Everything in this chapter is what has to be true for "conversion is up 12%" to mean what it sounds like it means, rather than being a number that happened to come out of a comparison that was never fair to begin with.
+Back to the opening example: did Bellwood's new checkout page actually beat the old one. Everything in this chapter is what has to be true for "conversion is up 12%" to mean what it sounds like it means, rather than being a number that happened to come out of a comparison that was never fair to begin with.
 
 ## What "fair" actually requires
 
@@ -9,6 +9,8 @@ A comparison is fair when the two groups differ in exactly one thing: the change
 **Random assignment** is how this is achieved in practice: each person or unit being compared is put into group A or group B by chance, not by anything about who they are or when they showed up. This matters for a specific, mechanical reason, not a procedural one: randomness spreads every *other* difference between the groups roughly evenly, on average — age, device, time of day, how much they already liked the product. If the groups end up looking different in outcomes despite starting out alike in everything else, the one thing left to explain the gap is the change itself.
 
 Without it, a comparison can look exactly as clean and still be worthless. Version B shown only after a certain date is really "before versus after," with everything else that changed on that date riding along uninvited. Version B shown only to people who opted into an early-access list is really "the kind of person who opts into things versus everyone else." Both produce a real, computable, entirely misleading number, and nothing about the number itself gives away which kind you have.
+
+This is exactly what turned up in Bellwood's number from Chapter 1. The new checkout page had never been shown to a random half of visitors at all — it simply went live for everyone on March 15. By the time Chapters 3 through 7 had made sure the arithmetic was sound, the comparison underneath it still wasn't: "conversion is up 12%" meant "the four weeks after March 15 beat the four weeks before it," a real number, honestly computed by then, quietly answering a comparison nobody had actually run.
 
 ## Could this just be noise?
 
@@ -25,6 +27,8 @@ Sample size is what connects this back to Chapter 2 directly: more data reduces 
 **Stopping the moment it looks good.** Checking a running test constantly and calling it the instant the result crosses into "significant" territory produces significant-looking results far more often than the test's own math assumes it should — because among all the natural ups and downs a fair test goes through on its way to a stable answer, you're choosing to stop at whichever passing moment happens to look best. The fix is procedural, not statistical: decide the sample size or the running time in advance, before you look at a single result, and hold to it.
 
 **Testing many things and reporting the one that worked.** Test twenty different metrics, or twenty different customer segments, against the same change, and — by chance alone — roughly one of them tends to look significant even when nothing real is happening anywhere. This is not dishonesty, usually; it's simply what "significant" starts to mean once you've quietly given chance twenty tries to produce one for you. Decide beforehand what you're actually measuring, or treat anything found by scanning afterward as a lead to test properly next, not as a result to act on now.
+
+Bellwood ran the honest version once the before/after problem was caught: a randomly-assigned holdout, decided and locked in before the retest launched, held for a fixed window regardless of how the numbers looked partway through. Chapter 10 picks up exactly where that retest left off.
 
 ## What to ask for
 

@@ -1,6 +1,6 @@
 # Borrowed, Not Reinvented
 
-Ask an agent to compute a correlation, a confidence interval (Chapter 10), a regression, and it will very happily write the formula from scratch — clean code, a recognisable structure, a number that comes out the other end looking exactly like it should. Whether that formula is actually correct is a separate question entirely, and "it looks right" is not evidence either way.
+Chapter 4 got the agent computing instead of guessing. Chapter 5 turned that computation into a reusable tool. This chapter is about whether the arithmetic inside it can actually be trusted — because ask Bellwood's agent to compute the confidence interval (Chapter 10) around that checkout number, or any correlation or regression, and it will very happily write the formula from scratch: clean code, a recognisable structure, a number that comes out the other end looking exactly like it should. Whether that formula is correct is a separate question, and "it looks right" is not evidence either way.
 
 ## What a library actually is
 
@@ -10,7 +10,7 @@ Writing the formula by hand instead is not more rigorous. It is a fresh implemen
 
 ## Why the hand-written version is the riskier one
 
-Statistical formulas have a specific, ordinary way of going wrong: not a crash, not an obviously nonsensical number, but a plausible-looking value computed with a small, easy mistake buried in it. A variance divided by n instead of n minus one. A test assuming the two groups have equal variance when they don't. A one-tailed test run where a two-tailed one was meant. Ties in the data handled by silently dropping them instead of the standard correction. None of these announce themselves. Every one of them produces a number that looks exactly like a right answer, because it *is* the right shape of answer — just computed slightly wrong.
+Statistical formulas have a specific, ordinary way of going wrong: not a crash, but a plausible-looking value computed with a small, easy mistake buried in it — a variance divided by n instead of n minus one, a test assuming two groups have equal variance when they don't. Neither announces itself. Both come out the right shape of answer, just computed slightly wrong.
 
 An established library has had exactly these mistakes found already, by the accumulated weight of everyone who has used it before you, on data stranger and more varied than yours. A version written fresh for this one occasion has had none of that. It might still be correct. It has not earned the confidence a correct answer deserves, because nothing has actually tested it yet except the same process that might have gotten it subtly wrong in the first place.
 
@@ -22,7 +22,7 @@ The rule is not "any library beats no library." A package with a handful of down
 
 ## Using the right tool does not mean using it right
 
-One caution, because it is easy to over-trust the moment a familiar library name appears: reaching for the standard tool is necessary, not sufficient. Chapter 3's assumption check still applies fully — a correctly-implemented statistical test, called with the wrong inputs or applied to data that doesn't satisfy what it needs to be true, produces a wrong answer just as confidently as a badly hand-written one would. The library guarantees the arithmetic inside the function is correct. It cannot guarantee the function was the right one to call, or that your data was fit to feed it. Those checks still have to happen; borrowing correct machinery is one link in the chain, not the whole of it.
+One caution, because it is easy to over-trust the moment a familiar library name appears: reaching for the standard tool is necessary, not sufficient. Chapter 3's assumption check still applies fully — a correctly-implemented statistical test, called with the wrong inputs or applied to data that doesn't satisfy what it needs to be true, produces a wrong answer just as confidently as a badly hand-written one would. The library gives you much stronger reason to trust that the arithmetic inside the function is correct than a fresh implementation would — it does not guarantee it outright; established libraries have had real bugs too, just far fewer of them, and far more eyes finding them. What a library can never promise is that its function was the right one to call, or that your data was fit to feed it. Those checks still have to happen; borrowing correct machinery is one link in the chain, not the whole of it.
 
 ## What to ask for
 

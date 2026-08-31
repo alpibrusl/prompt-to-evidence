@@ -12,6 +12,8 @@ Ask where the numbers came from and the honest answer is usually a shrug — *it
 
 **Logs and event streams** are the rawest of the four — one row per thing that happened, unfiltered, usually enormous, and genuinely useful precisely because nobody has shaped it into a story yet. It also means it needs real cleaning before it can answer anything; Chapter 13 is about that specifically.
 
+Bellwood's checkout data lives in exactly this last category — one row per page view, click, and completed order, streaming continuously — which is exactly why the next section matters before any of it gets analysed.
+
 None of these is inherently more trustworthy than another. Each fails differently, and knowing which one you're looking at tells you which questions are worth asking before you believe what it shows you.
 
 ## Volume is not information
@@ -30,7 +32,7 @@ This is the distinction to hold onto: **more data fixes noise. It does nothing w
 
 *Prompt to Production* keeps a small, disposable copy of a system to experiment against, rather than testing changes on the version real customers touch. The same move applies here, for the same reasons.
 
-If your dataset is a hundred thousand rows, or ten million, do not develop your analysis against the whole thing. Pull a **representative sample** — a smaller slice built so it still reflects the same mix the full dataset has, not just whichever rows happened to load first — a few hundred or a few thousand, enough to be genuinely like the whole but small enough to rerun in seconds. Get the method right there. A mistake found on a thousand rows costs you ten seconds and another attempt. The same mistake found only after running on the whole ten million can cost real money, if the computation is billed, or real time, if it is merely slow, and either way it costs you the far worse experience of debugging a method that is *also* still wrong, at the least convenient possible scale to be doing it at.
+Bellwood's checkout event log runs into the tens of millions of rows across a year; nobody develops a new analysis against all of them on the first attempt. If your dataset is a hundred thousand rows, or ten million, do not develop your analysis against the whole thing. Pull a **representative sample** — a smaller slice built so it still reflects the same mix the full dataset has, not just whichever rows happened to load first — a few hundred or a few thousand, enough to be genuinely like the whole but small enough to rerun in seconds. Get the method right there. A mistake found on a thousand rows costs you ten seconds and another attempt. The same mistake found only after running on the whole ten million can cost real money, if the computation is billed, or real time, if it is merely slow, and either way it costs you the far worse experience of debugging a method that is *also* still wrong, at the least convenient possible scale to be doing it at.
 
 The word "representative" is doing the actual work in that sentence. Taking the first thousand rows of a file sorted by date gives you one particular week, not a picture of the whole year — a sample chosen badly is a sample with bias baked into it, the exact problem the previous section just named. A representative sample needs to be picked so it reflects the same proportions — of customer types, time periods, whatever varies in ways that matter — as the data it's standing in for; ask for this explicitly, because "just grab a subset" and "grab a subset that looks like the whole" are different instructions with different failure modes.
 

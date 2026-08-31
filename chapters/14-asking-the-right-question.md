@@ -4,7 +4,7 @@ Every chapter so far has been about catching a problem after it's already in the
 
 ## A vague question gets a vague answer wearing confidence
 
-"Did the checkout page do better?" sounds like a question. It is really several unstated ones bundled together — better by what measure, compared against what, tested how — and left unstated, each one gets filled in by whatever the agent finds convenient, not necessarily what you actually meant. The answer that comes back will sound just as confident either way, because nothing about an under-specified question produces a hedge in the response to match it.
+"Did Bellwood's checkout page do better?" sounds like a question. It is really several unstated ones bundled together — better by what measure, compared against what, tested how — and left unstated, each one gets filled in by whatever the agent finds convenient, not necessarily what you actually meant. The answer that comes back will sound just as confident either way, because nothing about an under-specified question produces a hedge in the response to match it. It is, word for word, the question that opened this book in Chapter 1 — the one that got a fast, confident, wrong answer.
 
 The difference is not length for its own sake. It's whether the request contains anything the rest of this book taught you to check for, stated up front instead of discovered afterward:
 
@@ -16,7 +16,7 @@ Better:
 
 > "Compare conversion rate between the randomly-assigned control and treatment groups, over the full test period — don't stop early. Report the point estimate and the confidence interval, not just the headline number. Compute it with code, using a standard statistical library, and show me both the code and what it produced. Before running it on the real data, test the same method on a small example where we already know the answer."
 
-Notice what the second version actually is. Every clause is a chapter from this book, stated as a requirement instead of hoped for: random assignment and a full run, not a peeked-at one (Chapter 8); a range, not a bare point (Chapter 10); genuine computation with a named library (Chapters 4 and 6); a known-answer test before trusting it on the real thing (Chapter 7). Nothing in that request demands you understand the statistics yourself. It only requires knowing which questions exist — which, if you've read this far, you now do.
+Notice what the second version actually is. Every clause is a chapter from this book, stated as a requirement instead of hoped for: random assignment and a full run, not a peeked-at one (Chapter 8); a range, not a bare point (Chapter 10); genuine computation with a named library (Chapters 4 and 6); a known-answer test before trusting it on the real thing (Chapter 7). Nothing in that request demands you understand the statistics yourself. It only requires knowing which questions exist — which, if you've read this far, you now do. Asked this way from the start, it would have caught Bellwood's before/after problem the same week, not seven chapters later.
 
 ## What a complete request actually contains
 

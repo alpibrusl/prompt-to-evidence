@@ -1,6 +1,6 @@
 # Confidence, Not Certainty
 
-"Conversion is up 2 percentage points." Said plainly, it sounds like a fact with no give in it. It rarely is one. The 2 is a best guess, built from a limited sample, and the honest version of that sentence has a range attached to it whether or not anyone says the range out loud.
+Bellwood's honest, randomly-assigned retest from Chapter 8 came back smaller than the original headline: "Conversion is up 2 percentage points," not the 12% first reported. Said plainly, even that revised number sounds like a fact with no give in it. It rarely is one. The 2 is a best guess, built from a limited sample, and the honest version of that sentence has a range attached to it whether or not anyone says the range out loud.
 
 ## The number is a guess, precisely stated
 
