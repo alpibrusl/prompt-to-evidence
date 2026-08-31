@@ -9,13 +9,15 @@ measuring whether a campaign actually caused the lift it's credited with:
 the reader works comfortably in Excel and wants to go where their data team
 already lives, not become a statistician.
 
-Companion to [*Prompt to
+One of two companions to [*Prompt to
 Production*](https://github.com/alpibrusl/prompt-to-production) — same
-voice, same tooling, different subject. That book is software engineering
-discipline for people who cannot read code; this one is analytical
-discipline for people who are not mathematicians. Its own Chapter 1
-explicitly excludes ML and statistical work from scope — this book is what
-fills that gap.
+voice, same tooling, different subject each time. That book is software
+engineering discipline for people who cannot read code; this one is
+analytical discipline for people who are not mathematicians. Its own
+Chapter 1 explicitly excludes ML and statistical work from scope — this
+book is what fills that gap. The third, [*Prompt to
+Ledger*](https://github.com/alpibrusl/prompt-to-ledger), is financial
+discipline for people who are not accountants.
 
 > The agent will compute almost any comparison you ask for, and will rarely
 > tell you whether the comparison was a fair one.

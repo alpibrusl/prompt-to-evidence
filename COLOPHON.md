@@ -7,7 +7,9 @@ full history — [alpibrusl/prompt-to-evidence](https://github.com/alpibrusl/pro
 — where a term-continuity linter checks that no word is used before it is
 defined, and the same source renders to EPUB, HTML and PDF.
 
-It is a companion to [*Prompt to
+It is one of two companions to [*Prompt to
 Production*](https://github.com/alpibrusl/prompt-to-production), same
 tooling and the same discipline, applied to analytical correctness instead
-of software engineering.
+of software engineering. The other is [*Prompt to
+Ledger*](https://github.com/alpibrusl/prompt-to-ledger), applied to
+financial correctness.
