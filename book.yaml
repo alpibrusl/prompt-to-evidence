@@ -53,6 +53,11 @@ chapters:
   # Part V — Working With the Agent
   - { file: chapters/14-asking-the-right-question.md,   title: "Chapter 14 — Asking the Right Question" }
   - { file: chapters/15-the-minimum-bar.md,             title: "Chapter 15 — The Minimum Bar" }
+  # Afterword. Deliberately left unnumbered, like the equivalent chapter in
+  # prompt-to-production — see "The afterword is a real chapter, not front
+  # matter" in that book's CLAUDE.md. Still counted by the chapter linter,
+  # since chapter_files() reads the number from the filename regardless.
+  - { file: chapters/16-a-note-from-the-author.md, title: "" }
 
 front_matter: [title_page, copyright, toc]
 
@@ -60,4 +65,5 @@ back_matter:
   # Generated from glossary.yaml by `make glossary` — do not edit by hand.
   - { file: GLOSSARY.md, title: "Glossary" }
   - about_author
+  - { file: ABOUT-THE-SERIES.md, title: "The Prompt to... Series" }
   - { file: COLOPHON.md, title: "Colophon" }

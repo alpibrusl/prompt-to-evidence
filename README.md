@@ -32,7 +32,7 @@ discipline for people who are not accountants.
 | **IV** | Seeing and Learning | A chart is a claim · when the agent wants to build a model · data you can trust |
 | **V** | Working With the Agent | Asking the right question · the minimum bar |
 
-**Status: complete draft.** All 15 chapters written; ~17,100 words, 24 defined terms, 78 pages.
+**Status: complete draft**, plus a closing afterword. 16 chapters; ~17,700 words, 24 defined terms, 81 pages.
 
 ## The four rules
 
