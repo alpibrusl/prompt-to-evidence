@@ -12,6 +12,24 @@ Without it, a comparison can look exactly as clean and still be worthless. Versi
 
 This is exactly what turned up in Bellwood's number from Chapter 1. The new checkout page had never been shown to a random half of visitors at all — it simply went live for everyone on March 15. By the time Chapters 3 through 7 had made sure the arithmetic was sound, the comparison underneath it still wasn't: "conversion is up 12%" meant "the four weeks after March 15 beat the four weeks before it," a real number, honestly computed by then, quietly answering a comparison nobody had actually run.
 
+<div style="margin:1.6rem 0;">
+<svg viewBox="0 0 620 225" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">
+<text x="310" y="16" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">WHAT BELLWOOD ACTUALLY COMPARED</text>
+<rect x="20" y="25" width="290" height="44" fill="#eee" stroke="#999" stroke-width="1.5"/>
+<text x="165" y="52" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" fill="#1a1a1a">BEFORE — 4 weeks</text>
+<rect x="310" y="25" width="290" height="44" fill="#ccc" stroke="#999" stroke-width="1.5"/>
+<text x="455" y="52" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" fill="#1a1a1a">AFTER — 4 weeks</text>
+<line x1="310" y1="20" x2="310" y2="74" stroke="#666" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="310" y="88" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" font-style="italic" fill="#444">March 15 — new page ships to everyone, all at once</text>
+<text x="310" y="128" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">A FAIR COMPARISON</text>
+<rect x="20" y="140" width="580" height="26" fill="#eee" stroke="#999" stroke-width="1.5"/>
+<text x="32" y="157" font-family="EB Garamond, Georgia, serif" font-size="12.5" fill="#1a1a1a">GROUP A — existing page</text>
+<rect x="20" y="172" width="580" height="26" fill="#ccc" stroke="#999" stroke-width="1.5"/>
+<text x="32" y="189" font-family="EB Garamond, Georgia, serif" font-size="12.5" fill="#1a1a1a">GROUP B — new page</text>
+<text x="310" y="216" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" font-style="italic" fill="#444">Same eight-week window, both groups running the whole time — assignment by chance, not by date.</text>
+</svg>
+</div>
+
 ## Could this just be noise?
 
 Even with a genuinely fair comparison, one more question has to be answered before the gap means anything: could a difference this size have shown up by chance alone, even if the two versions were actually identical?
