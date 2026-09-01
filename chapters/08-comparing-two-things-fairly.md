@@ -1,6 +1,6 @@
 # Comparing Two Things Fairly
 
-Back to the opening example: did Bellwood's new checkout page actually beat the old one. Everything in this chapter is what has to be true for "conversion is up 12%" to mean what it sounds like it means, rather than being a number that happened to come out of a comparison that was never fair to begin with.
+Back to the opening example: did Bellwood's new checkout page actually beat the old one. Everything in this chapter is what has to be true for "conversion is up 20%" to mean what it sounds like it means, rather than being a number that happened to come out of a comparison that was never fair to begin with.
 
 ## What "fair" actually requires
 
@@ -10,7 +10,7 @@ A comparison is fair when the two groups differ in exactly one thing: the change
 
 Without it, a comparison can look exactly as clean and still be worthless. Version B shown only after a certain date is really "before versus after," with everything else that changed on that date riding along uninvited. Version B shown only to people who opted into an early-access list is really "the kind of person who opts into things versus everyone else." Both produce a real, computable, entirely misleading number, and nothing about the number itself gives away which kind you have.
 
-This is exactly what turned up in Bellwood's number from Chapter 1. The new checkout page had never been shown to a random half of visitors at all — it simply went live for everyone on March 15. By the time Chapters 3 through 7 had made sure the arithmetic was sound, the comparison underneath it still wasn't: "conversion is up 12%" meant "the four weeks after March 15 beat the four weeks before it," a real number, honestly computed by then, quietly answering a comparison nobody had actually run.
+This is exactly what turned up in Bellwood's number from Chapter 1. The new checkout page had never been shown to a random half of visitors at all — it simply went live for everyone on March 15. By the time Chapters 3 through 7 had made sure the arithmetic was sound, the comparison underneath it still wasn't: "conversion is up 20%" meant "the four weeks after March 15 beat the four weeks before it," a real number, honestly computed by then, quietly answering a comparison nobody had actually run.
 
 <div style="margin:1.6rem 0;">
 <svg viewBox="0 0 620 232" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">

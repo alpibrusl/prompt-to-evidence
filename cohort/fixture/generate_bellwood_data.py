@@ -6,7 +6,7 @@ book's own chapters already follow, with the exact flaw Chapter 8 narrates
 already planted:
 
   - headline-report.md      the memo as it was actually first presented —
-                             "conversion is up 12%, ship it" — with the
+                             "conversion is up 20%, ship it" — with the
                              truncated-axis chart described the way Chapter 11
                              says it was shown to leadership
   - checkout_daily.csv       the real daily numbers behind that headline: one
@@ -35,7 +35,7 @@ Usage: fixture/generate_bellwood_data.py [output-dir]
 Run this fresh before each session that uses it — see sessions.yaml's
 facilitator_notes on session 4 for why a clean handout matters. The generated
 data is disposable and gitignored; this script is the source. The seed is
-fixed on purpose: the story (12% naive, 2 points honest) has to land the
+fixed on purpose: the story (20% naive, 2 points honest) has to land the
 same way for every cohort, not drift with whoever happens to run this.
 """
 
@@ -52,14 +52,35 @@ SEED = 20260315  # the date the story turns on, not a special number otherwise
 
 # The true state of the world. Nobody in the fixture's own files states these
 # numbers directly — they're what a correct analysis would recover.
-BASE_RATE = 0.20          # old checkout page, true conversion rate
+#
+# Conversion was already rising through the spring, before anything shipped:
+# a straight-line ramp across the 28 days before launch, continuing at the
+# same slope across the 28 days after. That trend is what makes the naive
+# before/after comparison unfair on its own (Chapter 8): the "before" window
+# is not a counterfactual for the "after" window even with nothing else
+# going on. Averaged, the before window sits near 18.9% and the after
+# window's counterfactual near 20.3%.
+BEFORE_START_RATE = 0.182  # old page, day 1 of the before window
+BEFORE_END_RATE = 0.196    # old page, day 28 of the before window (launch eve)
+TREND_PER_DAY = (BEFORE_END_RATE - BEFORE_START_RATE) / 27
+
 TRUE_LIFT = 0.02           # new checkout page's real effect, 2 points, confirmed
                             # only by the honest randomized retest
 CONFOUND_LIFT = 0.004      # the free-shipping change + spring banner refresh
                             # that shipped the same day — inflates the naive
                             # before/after comparison on top of the real effect
+                            # and on top of the trend
 
-NAIVE_AFTER_RATE = BASE_RATE + TRUE_LIFT + CONFOUND_LIFT  # 0.224 -> +12% relative
+# By the May retest the spring ramp had levelled off; the old page converts
+# at about 21% and the new one at 21% + TRUE_LIFT. The retest's control arm
+# is the only clean measurement of the old page in the whole fixture.
+RETEST_BASE_RATE = 0.21
+
+# What a correct analysis recovers, in one unit (percentage points of
+# conversion): naive before/after ~ +3.8 pts (~+20% relative, the memo's
+# headline); trend-extrapolated counterfactual leaves ~ +2.4 pts; randomized
+# retest ~ +2.0 pts. Trend explains most of the naive overstatement, the
+# confound the rest.
 
 LAUNCH_DATE = date(2026, 3, 15)
 DAILY_VISITS_MEAN = 5000
@@ -88,13 +109,15 @@ def daterange(start: date, days: int):
 
 def write_checkout_daily(rng: random.Random, out: Path) -> None:
     rows = []
-    for d in daterange(LAUNCH_DATE - timedelta(days=28), 28):
+    for i, d in enumerate(daterange(LAUNCH_DATE - timedelta(days=28), 28)):
         visits = max(1, round(rng.gauss(DAILY_VISITS_MEAN, DAILY_VISITS_SD)))
-        conversions = sample_conversions(rng, visits, BASE_RATE)
+        rate = BEFORE_START_RATE + TREND_PER_DAY * i
+        conversions = sample_conversions(rng, visits, rate)
         rows.append((d, "before_march_15", visits, conversions))
-    for d in daterange(LAUNCH_DATE, 28):
+    for i, d in enumerate(daterange(LAUNCH_DATE, 28)):
         visits = max(1, round(rng.gauss(DAILY_VISITS_MEAN, DAILY_VISITS_SD)))
-        conversions = sample_conversions(rng, visits, NAIVE_AFTER_RATE)
+        counterfactual = BEFORE_START_RATE + TREND_PER_DAY * (28 + i)
+        conversions = sample_conversions(rng, visits, counterfactual + TRUE_LIFT + CONFOUND_LIFT)
         rows.append((d, "after_march_15", visits, conversions))
 
     with (out / "checkout_daily.csv").open("w", newline="", encoding="utf-8") as f:
@@ -107,7 +130,7 @@ def write_checkout_daily(rng: random.Random, out: Path) -> None:
 def write_retest_daily(rng: random.Random, out: Path) -> None:
     rows = []
     for d in daterange(RETEST_START, RETEST_DAYS):
-        for group, rate in (("control", BASE_RATE), ("treatment", BASE_RATE + TRUE_LIFT)):
+        for group, rate in (("control", RETEST_BASE_RATE), ("treatment", RETEST_BASE_RATE + TRUE_LIFT)):
             visits = max(1, round(rng.gauss(RETEST_ARM_VISITS_MEAN, RETEST_ARM_VISITS_SD)))
             conversions = sample_conversions(rng, visits, rate)
             rows.append((d, group, visits, conversions))
@@ -130,11 +153,11 @@ def write_headline_report(out: Path) -> None:
 We shipped the redesigned checkout page on March 15. Comparing the four
 weeks before the change to the four weeks since:
 
-> **Conversion is up 12%. Recommend we ship it to 100% and move on to the
+> **Conversion is up 20%. Recommend we ship it to 100% and move on to the
 > next thing on the roadmap.**
 
 See the attached chart — conversion by day, four weeks either side of the
-launch. Axis runs 20%–23% so the trend is easy to read at a glance.
+launch. Axis runs 17%–25% so the trend is easy to read at a glance.
 
 Raw numbers behind this are in `checkout_daily.csv`, if anyone wants to
 check our work.
@@ -175,8 +198,8 @@ Raw daily counts are in `retest_daily.csv`.
 
 > **Conversion is up 2 percentage points.**
 
-Chart attached — same two lines, axis 19%–23% so the gap between them is
-easy to see.
+Chart attached — the two arms' three-week rates side by side, axis 20%–24%
+so the gap between them is easy to see.
 """,
         encoding="utf-8",
     )

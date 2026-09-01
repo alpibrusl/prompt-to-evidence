@@ -1,6 +1,6 @@
 # Confidence, Not Certainty
 
-Bellwood's honest, randomly-assigned retest from Chapter 8 came back smaller than the original headline: "Conversion is up 2 percentage points," not the 12% first reported. Said plainly, even that revised number sounds like a fact with no give in it. It rarely is one. The 2 is a best guess, built from a limited sample, and the honest version of that sentence has a range attached to it whether or not anyone says the range out loud.
+Bellwood's honest, randomly-assigned retest from Chapter 8 came back smaller than the original headline: "Conversion is up 2 percentage points," not the 20% first reported. Those two numbers are in two different units, which is worth catching before comparing them at all: the new one is an absolute difference, from 21% of visitors to 23%, and put in the same relative terms as the headline it is a lift of about a tenth, not a fifth. An agent will happily report one number in each unit and let the contrast do work it hasn't earned; the comparison means something only once both are in the same unit, and in the same unit the honest result is about half the headline. Said plainly, even that revised number sounds like a fact with no give in it. It rarely is one. The 2 is a best guess, built from a limited sample, and the honest version of that sentence has a range attached to it whether or not anyone says the range out loud.
 
 ## The number is a guess, precisely stated
 
