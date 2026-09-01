@@ -2,6 +2,10 @@
 build/
 GLOSSARY.md
 
+# The cohort's generated fixture data -- fixture/generate_bellwood_data.py
+# is the source.
+cohort/fixture/bellwood-evidence/
+
 # Python
 __pycache__/
 *.pyc

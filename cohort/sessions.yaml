@@ -1,0 +1,235 @@
+sessions:
+  - number: 1
+    title: "The Number Is Not the Answer"
+    chapters: [1, 2, 3]
+    chapter_titles: ["The Handoff", "Where Your Data Actually Lives", "The Shape of an Analysis"]
+    in_session: >-
+      Read the opening line together, live — "conversion is up 12%, ship
+      it" — and walk the six-link chain behind it: question, data, method,
+      computation, number, decision. Ask the room for a real recent number
+      someone was handed at work and run the same chain against it, out
+      loud. Then a quick tour of the four places data actually lives —
+      spreadsheet, database, API, log stream — and which specific failure
+      mode belongs to each one, so "it's in the system" stops being an
+      answer anyone in the room accepts from themselves.
+    exercise:
+      name: "Find the weak joint"
+      description: >-
+        A short written scenario, modeled on Bellwood's growth team
+        mistaking "added to cart" for "completed purchase": a clean,
+        confident, wrong number. Students restate the general method being
+        used in one sentence, then name which of the six links is the weak
+        one — without being told which.
+    checkpoint: >-
+      Can name, unprompted, which of the six links is the likely weak one
+      for a wrong-feeling number the facilitator reads aloud cold, and
+      explain why in one sentence.
+
+  - number: 2
+    title: "Compute, Don't Guess; Borrow, Don't Reinvent"
+    chapters: [4, 5, 6]
+    chapter_titles: ["Make It Compute, Not Guess", "The Tool, Not the Answer", "Borrowed, Not Reinvented"]
+    in_session: >-
+      A live demo: ask the agent for a two-step percentage calculation two
+      ways — narrated in a sentence, then as code that actually runs — and
+      watch, live, whether the two answers agree. Then watch it turn a
+      script wired to one specific month and segment into a real tool with
+      parameters, and ask it, on camera, to name the specific library doing
+      the statistics inside it rather than a hand-rolled formula.
+    exercise:
+      name: "Build the general tool"
+      description: >-
+        Working from a number each student already has some stake in — a
+        report at their own job, or a simple provided example if they don't
+        — have the agent write, and run, a function that takes the
+        changeable part (a month, a segment, a group) as a parameter rather
+        than hardcoding it, using a named, established library for anything
+        beyond plain arithmetic, and show the actual code and output rather
+        than a restated number.
+    checkpoint: >-
+      Can produce, on request, the real code and output trail behind their
+      own tool, and name the specific library it used — not a description
+      of what the code does.
+
+  - number: 3
+    title: "Test It Before You Trust It"
+    chapters: [7]
+    chapter_titles: ["Test It Against What You Already Know"]
+    in_session: >-
+      Build a known-answer case together on the whiteboard — a handful of
+      rows simple enough to compute by hand — and run it against the tool
+      each student built in Session 2. Then a discussion of the "suspicion
+      cuts both ways" rule: pull up a suspiciously good result and a
+      suspiciously bad one side by side and practice treating them
+      identically, out loud, rather than celebrating one and doubting the
+      other.
+    exercise:
+      name: "Known-answer test"
+      description: >-
+        Each student hand-builds a small example for their Session 2 tool
+        where the answer is obvious by inspection, runs the tool against
+        it, and reports whether it got the known case right before anyone
+        is allowed to trust it on the real one.
+    checkpoint: >-
+      Has a documented known-answer case their tool actually passed, and
+      can state what they would have done next if it hadn't.
+
+  - number: 4
+    title: "The Comparison That Wasn't"
+    chapters: [8]
+    chapter_titles: ["Comparing Two Things Fairly"]
+    in_session: >-
+      What "fair" actually requires — random assignment, and why it's the
+      mechanism, not a procedural nicety — followed by the two traps that
+      quietly manufacture a significant-looking result: stopping the moment
+      it looks good, and testing many things and reporting the one that
+      worked.
+    exercise:
+      name: "First meeting with the fixture"
+      description: >-
+        Students are handed only headline-report.md and checkout_daily.csv
+        and told "audit this before it ships" — nothing else. They have to
+        notice, unprompted, that there is no group column anywhere in the
+        data: every visitor got the new page starting March 15, so "up
+        12%" is really "the four weeks after beat the four weeks before,"
+        not a randomized test of anything.
+      fixture_ref: "fixture/generate_bellwood_data.py"
+    checkpoint: >-
+      States, correctly and unprompted, that the comparison was never
+      randomized — a before/after split, not an A/B test — and can explain
+      why "the four weeks after beat the four weeks before" is not the same
+      claim as "the new page won."
+    facilitator_notes: >-
+      Run `fixture/generate_bellwood_data.py` fresh right before the
+      session — a student who's already seen the honest retest loses the
+      cold reaction this exercise depends on. Most groups suspect a data
+      quality problem before they think to check whether there's even a
+      group column at all; let them go down that path briefly, it's a fine
+      route in, and arriving at "there's no group column" unprompted is a
+      stronger finding than being pointed at it.
+
+  - number: 5
+    title: "What Actually Caused It"
+    chapters: [9]
+    chapter_titles: ["Measuring What You Did"]
+    in_session: >-
+      Continue straight from Session 4: even granting a fair test existed,
+      what else could explain a lift this size. Walk the counterfactual
+      idea and the campaign example from the chapter live, then the three
+      ways to build a fair comparison after the fact — randomized holdout,
+      comparable unaffected group, extrapolated prior trend — ranked
+      honestly from strongest to weakest evidence.
+    exercise:
+      name: "Read the deploy notes"
+      description: >-
+        Add deploy-notes.md to the same fixture. Students find that a
+        lowered free-shipping threshold and a homepage refresh shipped the
+        exact same week as the checkout page, and have to state,
+        specifically, what that means for the 12% number — that it was
+        never purely measuring the checkout page, confound aside from the
+        randomization problem entirely.
+      fixture_ref: "fixture/generate_bellwood_data.py"
+    checkpoint: >-
+      Names the specific confound(s) in deploy-notes.md and states that the
+      naive comparison overstates the checkout page's own effect by more
+      than the missing-randomization problem alone would explain.
+
+  - number: 6
+    title: "A Range, Not a Fact — Drawn Plainly"
+    chapters: [10, 11]
+    chapter_titles: ["Confidence, Not Certainty", "A Chart Is a Claim"]
+    in_session: >-
+      Reveal the honest retest's raw numbers and compute a point estimate
+      and confidence interval live, on the actual data, discussing what the
+      width tells you and whether it excludes zero. Then look at the same
+      result drawn two ways — the truncated 19–23% axis it was actually
+      shown with, and a full-range axis — and ask, as a group, whether the
+      story changes.
+    exercise:
+      name: "Compute the range, then redraw the chart"
+      description: >-
+        Add retest-headline.md and retest_daily.csv to the fixture.
+        Students compute the honest point estimate and its confidence
+        interval from the raw daily counts, then describe how the same
+        result would read on a chart truncated to 19–23% versus one drawn
+        from a full, plain range, and decide whether the truncated version
+        they were originally shown was misleading.
+      fixture_ref: "fixture/generate_bellwood_data.py"
+    checkpoint: >-
+      Produces a specific range, not just a point estimate, from the
+      retest data; states plainly whether it excludes zero; and can
+      describe how the chart's axis choice changed the story's apparent
+      size without a single underlying number changing.
+    facilitator_notes: >-
+      The computed interval should land narrow enough to exclude zero but
+      wide enough to be worth reporting as a range — if a group's math
+      comes out wildly different, check they used a real library
+      (Chapter 6) rather than a hand-rolled interval formula before
+      assuming their data is the problem. Watch for a group treating
+      "excludes zero" as the same thing as "large enough to matter" —
+      Chapter 10 draws that line on purpose, and it's worth naming
+      explicitly the moment a group blurs it.
+
+  - number: 7
+    title: "Models and Data You Can Trust"
+    chapters: [12, 13]
+    chapter_titles: ["When the Agent Wants to Build a Model", "Data You Can Trust"]
+    in_session: >-
+      Batch versus online risk, walked through a churn-prediction scenario
+      — what happens if the model is wrong once a month with a person
+      reviewing the list, versus wrong continuously and automatically. The
+      suspicious-99%-accuracy trap, and what a trivial "predict nobody
+      churns" baseline would already score on the same data. Then a
+      hands-on data-profiling pass together: actual unique values in a
+      category column, actual min and max in a numeric one, and whether a
+      pattern of missing data lines up suspiciously well with the outcome
+      being predicted.
+    exercise:
+      name: "Profile before you trust it"
+      description: >-
+        A small provided sample of customer rows — inconsistent spellings
+        in a country field ("USA" / "United States" / "us"), and a
+        satisfaction-survey column that's empty disproportionately often
+        for the customers who later churned. Students profile the data —
+        unique values per category column, min/max per numeric column,
+        whether the missingness looks random or related to the outcome —
+        before answering any question about churn risk itself.
+    checkpoint: >-
+      Identifies at least one category-spelling inconsistency by name, and
+      correctly states that the missing satisfaction values are not
+      missing at random — they're concentrated in exactly the customers the
+      model would most need to hear from.
+
+  - number: 8
+    title: "Ask It Right, Then Check It"
+    chapters: [14, 15, 16]
+    chapter_titles:
+      - "Asking the Right Question"
+      - "The Minimum Bar"
+      - "A Note from the Human Author"
+    in_session: >-
+      Rewrite a vague request live, turning "did the new page do better"
+      into a complete one containing every checkable clause from this
+      book's chapters, stated up front instead of discovered seven weeks
+      later. Then walk Chapter 15's checklist item by item against
+      Bellwood's own journey — the 12% headline, the confound, the honest 2
+      points, the range around it — naming exactly how many of this
+      cohort's own sessions that one number actually needed before it was
+      evidence rather than a plausible sentence.
+    checkpoint: >-
+      A specific, honest finding presented to the group — not a clean bill
+      of health, and not a wall of unconfirmed items either.
+    capstone: true
+    deliverable: >-
+      A completed evidence check against the rubric, run with the
+      prompt-to-evidence/skills/verify-evidence skill on something real —
+      their own analysis if they have one, or the full Bellwood arc (the
+      fixture, headline-report.md through retest_daily.csv) if not.
+    facilitator_notes: >-
+      The rubric rewards an honest "ask, unconfirmed" finding as much as a
+      real "not done" one — watch for students quietly upgrading an
+      unconfirmed item to done because the machinery for it exists (a
+      library was named, so surely it must have been tested against a
+      known case) — that is the exact mistake the skill's own instructions
+      warn against, and worth naming out loud when it happens rather than
+      just correcting the finding.

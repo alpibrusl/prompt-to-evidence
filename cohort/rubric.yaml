@@ -1,0 +1,28 @@
+dimensions:
+  - name: "Specificity"
+    description: >-
+      Findings name the actual comparison type, the actual library, the
+      actual range — not a general impression that "the methodology looks
+      reasonable." Checks the real code, output, or chart behind a number,
+      not the sentence describing it.
+  - name: "Honesty under uncertainty"
+    description: >-
+      Items nobody can verify from the artifact in front of them — whether a
+      result was actually cross-checked against something else, whether
+      unusual results get scrutiny as a habit rather than only when they're
+      suspicious — are marked unconfirmed and asked about, not rounded up to
+      done because nothing contradicts it, and not rounded down to failed
+      because it wasn't shown.
+  - name: "Fair-comparison judgment"
+    description: >-
+      Correctly names whether a comparison was actually randomized, or is a
+      before/after, a self-selected group, or some other substitute wearing
+      a fair comparison's clothes — the single most consequential item on
+      the checklist, and the one a plausible-sounding report is likeliest to
+      have gotten past without anyone checking.
+  - name: "Proportionality"
+    description: >-
+      Closes by weighing the gaps against what's actually riding on the
+      number — what happens if it's wrong, and who acts on it before anyone
+      finds out. A rough internal curiosity and a number about to move real
+      budget don't get the same urgency for the same open item.
