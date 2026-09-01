@@ -36,6 +36,32 @@ Three approaches, genuinely different in strength, and worth being honest about 
 
 The order these are listed in is not incidental. It runs from *decided in advance, strong evidence* to *reconstructed afterward, weak evidence*, and the single highest-leverage habit in this entire chapter is choosing the first one before the next campaign launches, rather than reaching for the third one after this one has already run.
 
+<div style="margin:1.6rem 0;">
+<svg viewBox="0 0 660 300" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="pte3-arrow" viewBox="0 0 6 6" refX="5.5" refY="3" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L6,3 L0,6" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
+</marker>
+</defs>
+<text x="330" y="18" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">EVIDENCE STRENGTH, RANKED</text>
+<rect x="20" y="40" width="185" height="62" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="112.5" y="64" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">RANDOMIZED</text>
+<text x="112.5" y="80" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">HOLDOUT</text>
+<text x="112.5" y="95" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="9.5" fill="#666">Strongest — decided in advance</text>
+<rect x="235" y="112" width="185" height="62" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="327.5" y="136" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">COMPARABLE,</text>
+<text x="327.5" y="152" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">UNAFFECTED GROUP</text>
+<text x="327.5" y="167" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="9.5" fill="#666">Weaker — not randomly split</text>
+<rect x="450" y="184" width="185" height="62" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="542.5" y="208" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">TREND</text>
+<text x="542.5" y="224" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="12.5" font-weight="600" fill="#1a1a1a">EXTRAPOLATION</text>
+<text x="542.5" y="239" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="9.5" fill="#666">Weakest — reconstructed afterward</text>
+<line x1="205" y1="71" x2="233" y2="143" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte3-arrow)"/>
+<line x1="420" y1="143" x2="448" y2="215" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte3-arrow)"/>
+<text x="330" y="278" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" font-style="italic" fill="#444">Choose from the top of this list before the campaign launches — the bottom is what's left after it already has.</text>
+</svg>
+</div>
+
 ## What to ask for
 
 > "Was any part of the audience deliberately held out of this campaign, so we have a real comparison group? If not, can we set that up before the next one launches?"

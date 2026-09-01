@@ -44,6 +44,44 @@ The useful habit this chapter is building toward: when a result feels off, you a
 
 A result that is suspiciously *good* — a lift far bigger than anything reasonable, an accuracy that seems too clean — points first at the data-fit and method links: something is probably leaking information into the answer that shouldn't be there. A result that is suspiciously *bad*, or simply inexplicable, points first at the computation link: something in the arithmetic likely broke. Chapter 7 makes this into a full habit; the point to take now is narrower — the shape of the wrongness is itself a clue about where in the chain to look, and "somewhere" is never the only available answer.
 
+<div style="margin:1.6rem 0;">
+<svg viewBox="0 0 714 240" width="100%" style="display:block;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="pte2-arrow" viewBox="0 0 6 6" refX="5.5" refY="3" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L6,3 L0,6" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
+</marker>
+</defs>
+<text x="357" y="16" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">THE CHAIN, REVISITED</text>
+<rect x="12" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="62" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">QUESTION</text>
+<rect x="130" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="180" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">DATA</text>
+<rect x="248" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="298" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">METHOD</text>
+<rect x="366" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="416" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">COMPUTATION</text>
+<rect x="484" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="534" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">NUMBER</text>
+<rect x="602" y="50" width="100" height="46" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+<text x="652" y="77" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="13" font-weight="600" fill="#1a1a1a">DECISION</text>
+<line x1="112" y1="73" x2="128" y2="73" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<line x1="230" y1="73" x2="246" y2="73" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<line x1="348" y1="73" x2="364" y2="73" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<line x1="466" y1="73" x2="482" y2="73" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<line x1="584" y1="73" x2="600" y2="73" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<line x1="180" y1="96" x2="180" y2="107" stroke="#1a1a1a" stroke-width="1.1"/>
+<line x1="298" y1="96" x2="298" y2="107" stroke="#1a1a1a" stroke-width="1.1"/>
+<line x1="180" y1="107" x2="298" y2="107" stroke="#1a1a1a" stroke-width="1.1"/>
+<line x1="239" y1="150" x2="239" y2="109" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<text x="239" y="167" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">SUSPICIOUSLY GOOD →</text>
+<text x="239" y="182" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="11" fill="#666">points first at data-fit and method</text>
+<line x1="416" y1="145" x2="416" y2="98" stroke="#1a1a1a" stroke-width="1.1" marker-end="url(#pte2-arrow)"/>
+<text x="416" y="162" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" letter-spacing="0.06em" fill="#9a9a9a">SUSPICIOUSLY BAD →</text>
+<text x="416" y="177" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="11" fill="#666">points first at computation</text>
+<text x="357" y="226" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="10.5" font-style="italic" fill="#444">The shape of the wrongness is a clue about which link in the chain to check first.</text>
+</svg>
+</div>
+
 ## What to ask for
 
 > "State the general method you're using here in one sentence — not the answer for this case specifically, but the rule that would produce an answer for any similar case."
