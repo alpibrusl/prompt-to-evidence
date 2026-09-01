@@ -26,7 +26,7 @@ You do not need to read the code to apply this chapter. You need to be able to a
 
 **"What are the parameters — the things that change between runs — and what's the logic that stays fixed regardless?"**
 
-A real tool answers this cleanly: here are the two or three inputs, here is what happens to them once supplied. A disguised one-off answer produces a hedge, a re-explanation of March and Spain specifically, or code where the values you'd expect to be parameters turn out to be typed directly into the middle of the logic. That is the tell, and you do not need to read a single further line to have caught it.
+A real tool answers this cleanly: here are the two or three inputs, here is what happens to them once supplied. A disguised one-off answer produces a hedge, a re-explanation of March and mobile specifically, or code where the values you'd expect to be parameters turn out to be typed directly into the middle of the logic. That is the tell, and you do not need to read a single further line to have caught it.
 
 ## What to ask for
 

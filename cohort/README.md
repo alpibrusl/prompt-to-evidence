@@ -28,15 +28,15 @@ see `../.gitignore`.
 
 Every book in this series opens with a scene; this cohort is built to let
 students live inside this one rather than just read it. Chapter 1 opens
-with a one-sentence report: *conversion is up 12%, ship it.* The fixture
+with a one-sentence report: *conversion is up 20%, ship it.* The fixture
 hands students exactly that memo and the real daily numbers behind it, cold,
 and lets them find — themselves, the way the book's own Chapter 8 narrates
 it — that the comparison was never randomized: every visitor got the new
-page starting March 15, so "up 12%" really means "the four weeks after beat
+page starting March 15, so "up 20%" really means "the four weeks after beat
 the four weeks before." Session 5 adds the confound the naive number was
 also quietly carrying (two other things shipped that same week). Session 6
 adds the honest, randomly-assigned retest and its confidence interval — "up
-2 percentage points," not 12 — and the same result drawn on a truncated
+2 percentage points," about half the headline in the same unit — and the same result drawn on a truncated
 axis versus a plain one, so the chart-honesty lesson in Chapter 11 lands on
 data the room already has a stake in, not a generic example.
 

@@ -4,7 +4,7 @@ sessions:
     chapters: [1, 2, 3]
     chapter_titles: ["The Handoff", "Where Your Data Actually Lives", "The Shape of an Analysis"]
     in_session: >-
-      Read the opening line together, live — "conversion is up 12%, ship
+      Read the opening line together, live — "conversion is up 20%, ship
       it" — and walk the six-link chain behind it: question, data, method,
       computation, number, decision. Ask the room for a real recent number
       someone was handed at work and run the same chain against it, out
@@ -91,7 +91,7 @@ sessions:
         and told "audit this before it ships" — nothing else. They have to
         notice, unprompted, that there is no group column anywhere in the
         data: every visitor got the new page starting March 15, so "up
-        12%" is really "the four weeks after beat the four weeks before,"
+        20%" is really "the four weeks after beat the four weeks before,"
         not a randomized test of anything.
       fixture_ref: "fixture/generate_bellwood_data.py"
     checkpoint: >-
@@ -125,7 +125,7 @@ sessions:
         Add deploy-notes.md to the same fixture. Students find that a
         lowered free-shipping threshold and a homepage refresh shipped the
         exact same week as the checkout page, and have to state,
-        specifically, what that means for the 12% number — that it was
+        specifically, what that means for the 20% number — that it was
         never purely measuring the checkout page, confound aside from the
         randomization problem entirely.
       fixture_ref: "fixture/generate_bellwood_data.py"
@@ -133,6 +133,19 @@ sessions:
       Names the specific confound(s) in deploy-notes.md and states that the
       naive comparison overstates the checkout page's own effect by more
       than the missing-randomization problem alone would explain.
+    facilitator_notes: >-
+      Reference numbers for the generated fixture, all in percentage
+      points of conversion so nobody compares a relative figure with an
+      absolute one: the naive before/after is about +3.9 points (18.8% to
+      22.7%, the memo's "up 20%"); a straight line fitted to the 28 days
+      before launch and extended over the 28 days after puts the
+      counterfactual near 19.9%, leaving about +2.8 points once the trend
+      is removed; the randomized retest in Session 6 lands at +2.0. The
+      trend is the missing-randomization problem made visible, and it
+      explains most of the overstatement; the confound in deploy-notes.md
+      (about +0.4 points by construction) is the rest. A group that stops
+      at "the comparison wasn't randomized" has found the bigger problem
+      but not the one this session is about.
 
   - number: 6
     title: "A Range, Not a Fact — Drawn Plainly"
@@ -142,7 +155,7 @@ sessions:
       Reveal the honest retest's raw numbers and compute a point estimate
       and confidence interval live, on the actual data, discussing what the
       width tells you and whether it excludes zero. Then look at the same
-      result drawn two ways — the truncated 19–23% axis it was actually
+      result drawn two ways — the truncated 20–24% axis it was actually
       shown with, and a full-range axis — and ask, as a group, whether the
       story changes.
     exercise:
@@ -151,7 +164,7 @@ sessions:
         Add retest-headline.md and retest_daily.csv to the fixture.
         Students compute the honest point estimate and its confidence
         interval from the raw daily counts, then describe how the same
-        result would read on a chart truncated to 19–23% versus one drawn
+        result would read on a chart truncated to 20–24% versus one drawn
         from a full, plain range, and decide whether the truncated version
         they were originally shown was misleading.
       fixture_ref: "fixture/generate_bellwood_data.py"
@@ -161,8 +174,12 @@ sessions:
       describe how the chart's axis choice changed the story's apparent
       size without a single underlying number changing.
     facilitator_notes: >-
-      The computed interval should land narrow enough to exclude zero but
-      wide enough to be worth reporting as a range — if a group's math
+      Reference numbers for the generated fixture: control 922 orders from
+      4,197 visits (22.0%), treatment 1,015 from 4,229 (24.0%); difference
+      +2.0 points, 95% interval roughly +0.2 to +3.8, z about 2.2. That is
+      a marginal exclusion of zero, not a comfortable one, and worth saying
+      so. The computed interval should land narrow enough to exclude zero
+      but wide enough to be worth reporting as a range — if a group's math
       comes out wildly different, check they used a real library
       (Chapter 6) rather than a hand-rolled interval formula before
       assuming their data is the problem. Watch for a group treating
@@ -212,7 +229,7 @@ sessions:
       into a complete one containing every checkable clause from this
       book's chapters, stated up front instead of discovered seven weeks
       later. Then walk Chapter 15's checklist item by item against
-      Bellwood's own journey — the 12% headline, the confound, the honest 2
+      Bellwood's own journey — the 20% headline, the confound, the honest 2
       points, the range around it — naming exactly how many of this
       cohort's own sessions that one number actually needed before it was
       evidence rather than a plausible sentence.

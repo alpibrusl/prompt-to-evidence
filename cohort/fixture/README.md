@@ -5,7 +5,7 @@ inventing new demo material each time — students meet the same number from
 three different angles, the same way the book itself does.
 
 It's Bellwood's checkout-page story, the one that opens Chapter 1 and closes
-Chapter 15: "conversion is up 12%, ship it," and everything that turns out to
+Chapter 15: "conversion is up 20%, ship it," and everything that turns out to
 be wrong with that sentence once someone actually checks it.
 
 ## Generate it
@@ -19,7 +19,7 @@ Run this **fresh before each session** that uses it, not once at the start
 of the cohort. A student who's already seen the honest numbers loses the
 "cold" reaction Session 4's exercise depends on, and nothing about the
 fixture is meant to persist between sessions or cohorts. The seed is fixed,
-so the story lands the same way every time — 12% naive, 2 points honest —
+so the story lands the same way every time — 20% naive, 2 points honest —
 which matters more here than novelty would.
 
 The generated data is disposable: this script is the source, the folder it
@@ -29,7 +29,7 @@ same way `build/` stays out of the book's own.
 ## What's in it, and which session uses it
 
 - **`headline-report.md`** — the memo exactly as it was first presented:
-  "conversion is up 12%, ship it," with the truncated-axis chart described
+  "conversion is up 20%, ship it," with the truncated-axis chart described
   the way Chapter 11 says these things get shown.
 - **`checkout_daily.csv`** — the real daily numbers behind that headline.
   Deliberately has no random-assignment column, because there wasn't one —
@@ -60,7 +60,7 @@ one, and the naive number was never just measuring the checkout page.
 
 **Session 6** adds `retest-headline.md` and `retest_daily.csv`. Students
 compute the honest point estimate and its confidence interval from the raw
-counts, then redraw the chart both ways — axis truncated to 19–23%, and
+counts, then redraw the chart both ways — axis truncated to 20–24%, and
 axis running the full range — and decide for themselves whether the story
 holds up drawn plainly.
 
@@ -69,14 +69,23 @@ holds up drawn plainly.
 The generator's true values (never stated in the fixture's own files,
 recoverable only by actually running the numbers):
 
-- True baseline conversion: 20.0%
+- Conversion was already rising through the spring: a straight-line ramp
+  from 18.2% to 19.6% across the 28 days before launch, continuing at the
+  same slope across the 28 days after. Averaged, the before window sits
+  near 18.9% and the after window's counterfactual near 20.3%. This is the
+  missing-randomization problem in the data itself — the "before" window
+  is not a fair stand-in for the "after" window even with nothing else
+  going on.
 - True effect of the new checkout page alone: **+2.0 percentage points**
 - Naive before/after also picks up a **confound** — the free-shipping
   change and spring banner shipped the same week — worth roughly another
-  +0.4 points, which is why the naive comparison overstates the honest one
-  by more than the randomization problem alone would explain
-- The naive before/after comparison lands close to **+12% relative** (about
-  20.0% → 22.4%) — the number in Chapter 1, reproduced exactly
-- The honest randomized retest lands close to **+2 percentage points**,
-  with a 95% confidence interval comfortably excluding zero but wide enough
-  to be worth actually reporting as a range — the number in Chapter 10
+  +0.4 points on top of the trend.
+- In one unit, percentage points of conversion: the naive before/after
+  comparison lands at about **+3.9 points** (18.8% → 22.7%, or +21%
+  relative — the memo's "up 20%"); a trend-extrapolated counterfactual
+  leaves about **+2.8 points**; the honest randomized retest lands at
+  **+2.0 points** (22.0% → 24.0%), with a 95% confidence interval of
+  roughly +0.2 to +3.8 — excluding zero, but only just, and wide enough to
+  be worth actually reporting as a range. That is the number in Chapter
+  10, and the reason the retest's control arm sits above the launch-day
+  rate is that the spring ramp had levelled off near 21–22% by May.

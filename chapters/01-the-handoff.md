@@ -1,6 +1,6 @@
 # The Handoff
 
-You ask the agent whether Bellwood's new checkout page actually beat the old one. It answers in one sentence: *conversion is up 12%, ship it.* The sentence arrives fast, sounds definite, and reads exactly the way a correct answer would read.
+You ask the agent whether the new checkout page at Bellwood — an online shop, and this book's running example — actually beat the old one. It answers in one sentence: *conversion is up 20%, ship it.* The sentence arrives fast, sounds definite, and reads exactly the way a correct answer would read.
 
 It might be correct. That is the entire problem this book is about.
 
@@ -10,7 +10,7 @@ Here is the first idea, and everything else in this book follows from it.
 
 What the agent gave you is a **number**: a value that came out of a calculation. A number is not evidence. **Evidence** is a result you could defend to someone who doubts it — someone who asks *how do you know*, and expects an answer that survives the question. Getting from a number to evidence takes several steps, and any one of them can fail silently while the number itself looks exactly the same.
 
-The path runs: a question, then data, then a method applied to that data, then a computation, then a number, then a decision made on the strength of it. Six links. The agent can produce the last one — the number — in under a second. Whether the five links before it were sound is a separate matter entirely, and the number does not carry that information on its face. A 12% lift computed correctly and a 12% lift computed on a broken comparison look identical in a chat window.
+The path runs: a question, then data, then a method applied to that data, then a computation, then a number, then a decision made on the strength of it. Six links. The agent can produce the last one — the number — in under a second. Whether the five links before it were sound is a separate matter entirely, and the number does not carry that information on its face. A 20% lift computed correctly and a 20% lift computed on a broken comparison look identical in a chat window.
 
 You have almost certainly done this kind of work before, in a spreadsheet, and trusted the result — because in a spreadsheet, the method is usually just arithmetic, and arithmetic is easy to check by eye. `=AVERAGE(B2:B40)` either looks right or it does not; you can glance at the range and know if it's the wrong column. What an agent can now do that Excel never asked of you is run an actual statistical comparison, fit an actual model, compute an actual causal estimate — categories of calculation where "does it look right" stops being something you can judge by glancing at the formula bar. The number gets harder to eyeball exactly as the machinery producing it gets more capable. That gap is this book.
 
@@ -33,7 +33,7 @@ The other kind is quieter, and it is what the rest of this book is for. The anal
 - Something else happened at the same time as the change you're measuring — a price drop, a holiday, a competitor's outage — and it is quietly doing all the work you're crediting to your campaign.
 - The code computing the comparison has a bug that happens not to crash. It runs. It returns a number. The number is simply wrong.
 
-None of these announce themselves. A dashboard does not turn red when the comparison behind it was unfair. This is the kind of wrong you own the system, not fixing a chart — Chapter 8 onward is a set of specific, checkable questions built to catch exactly this category, because *looking plausible* and *being true* are different properties, and only one of them is visible from the chat window.
+None of these announce themselves. A dashboard does not turn red when the comparison behind it was unfair. This is the kind of wrong that is yours to own, not a chart to fix — Chapter 8 onward is a set of specific, checkable questions built to catch exactly this category, because *looking plausible* and *being true* are different properties, and only one of them is visible from the chat window.
 
 ## Why nobody told you this
 

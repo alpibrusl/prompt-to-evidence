@@ -175,9 +175,10 @@ concepts:
     aka: ["ML model", "predictive model"]
     definition: >-
       A model built from data to predict an output, judged by how well it
-      performs on cases it hasn't already seen. Different from a regression
-      used to estimate or explain a relationship (Chapters 8-9), which is
-      judged by a confidence interval rather than prediction on unseen data.
+      performs on cases it hasn't already seen. Different from a calculation
+      built to estimate or explain a relationship — how big an effect is,
+      whether a change caused it (Chapters 8-10) — which is judged by a
+      confidence interval rather than prediction on unseen data.
     defined_in: 12
 
   - term: "batch model"
