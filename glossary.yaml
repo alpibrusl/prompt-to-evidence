@@ -30,12 +30,14 @@ concepts:
     definition: >-
       A value that came out of a calculation. Not, by itself, a reason to
       believe anything.
+    analogy: "A reading on a dial that may or may not be connected to anything."
     defined_in: 1
 
   - term: "evidence"
     definition: >-
       A result you could defend to someone who doubts it — someone who asks
       how you know, and expects an answer that survives the question.
+    analogy: "A receipt rather than a claim: it survives being asked where it came from."
     depends_on: ["number"]
     defined_in: 1
 
@@ -45,6 +47,7 @@ concepts:
     definition: >-
       Random scatter around the true answer. Averages out as you add more
       data — the reason a bigger sample gives a more precise estimate.
+    analogy: "A shaky hand on a bathroom scale — weigh yourself ten times and average it out."
     defined_in: 2
 
   - term: "bias"
@@ -54,6 +57,9 @@ concepts:
       A systematic distortion that every observation carries in the same
       direction, caused by how the data was collected. More data does not
       fix it — it only gives a more confident estimate of the wrong thing.
+    analogy: >-
+      A bathroom scale two kilos light: weigh yourself a thousand times and
+      you learn the wrong weight precisely.
     depends_on: ["noise"]
     defined_in: 2
 
@@ -62,6 +68,7 @@ concepts:
       A smaller slice of a dataset built so it still reflects the same mix
       as the whole — the same proportions of whatever varies in ways that
       matter — rather than just whichever rows happened to load first.
+    analogy: "A spoonful from a stirred pot, not the first scoop off the top."
     depends_on: ["bias"]
     defined_in: 2
 
@@ -70,6 +77,7 @@ concepts:
     definition: >-
       A condition that has to hold about the data for a method's output to
       mean what it claims to mean. Every method has some, stated or not.
+    analogy: "The fine print on a warranty: unread until the thing breaks."
     defined_in: 3
     scan: true
 
@@ -96,6 +104,7 @@ concepts:
       The part of a computation that changes from one run to the next —
       a month, a segment, a threshold — kept separate from the logic that
       stays fixed regardless of what value is supplied.
+    analogy: "The date you type into the form, not the form."
     defined_in: 5
     scan: true
 
@@ -105,6 +114,7 @@ concepts:
       Code someone else already wrote, tested and published, so using it
       does not require reimplementing — or fully understanding — what
       happens inside it.
+    analogy: "A power tool: you use it without having machined the gears."
     defined_in: 6
 
   # ─── Chapter 7 — Test It Against What You Already Know ──────────────────
@@ -119,6 +129,7 @@ concepts:
       Running a method against a case where the correct result is already
       known, to check the method itself before trusting it on a case where
       the answer isn't.
+    analogy: "Weighing a bag of sugar you know is a kilo, to test the scale."
     depends_on: ["parameter"]
     defined_in: 7
 
@@ -129,6 +140,7 @@ concepts:
       the surrounding trend. The scalable form of suspicion: run
       continuously on every result, not just the extreme-looking ones,
       without needing to re-derive anything from scratch.
+    analogy: "Two witnesses who never met telling the same story."
     depends_on: ["known-answer test"]
     defined_in: 7
 
@@ -140,6 +152,7 @@ concepts:
       by chance, not by anything about who they are. Spreads every other
       difference between the groups evenly, so a remaining gap in outcomes
       is more plausibly caused by the thing being tested.
+    analogy: "Dealing the cards, rather than choosing who gets which."
     depends_on: ["bias"]
     defined_in: 8
 
@@ -152,6 +165,7 @@ concepts:
       Significant means the honest answer is quite surprising. Not a
       measure of how large or important the effect is, and not the
       probability the effect is real.
+    analogy: "How surprised you would be by ten heads in a row — not how much you would win."
     depends_on: ["noise"]
     defined_in: 8
 
@@ -162,6 +176,7 @@ concepts:
       directly observable — only the world that actually occurred is. Every
       method for measuring impact is really a way of building a stand-in
       for the world you didn't get to see.
+    analogy: "The other road at the fork: describable in detail, never drivable."
     defined_in: 9
     scan: true
 
@@ -171,6 +186,7 @@ concepts:
       Something that affects both whether — or when — a change was made
       and the outcome being measured, creating the appearance of a
       relationship that isn't really about the change at all.
+    analogy: "Hospitals are full of sick people. The hospital did not make them sick."
     depends_on: ["bias", "counterfactual"]
     defined_in: 9
 
@@ -180,6 +196,7 @@ concepts:
       The single best-guess number a calculation produces. Real, and always
       a guess — computed from one particular sample that would have come
       out slightly different with another sample drawn the same way.
+    analogy: "One shot at a target, reported as though it were the bullseye."
     defined_in: 10
 
   - term: "confidence interval"
@@ -187,6 +204,7 @@ concepts:
       A plausible range around a point estimate, not just the one number —
       narrow when the data pins the answer down precisely, wide when it
       doesn't, regardless of how precise the headline number looks.
+    analogy: "How tightly the shots group, not where the last one landed."
     depends_on: ["point estimate", "noise"]
     defined_in: 10
 
@@ -197,6 +215,7 @@ concepts:
       monthly average standing in for thirty days of real numbers, an
       overall trend line standing in for several groups that may not be
       moving together at all.
+    analogy: "One foot in the oven and one in the freezer, reported as a comfortable average."
     depends_on: ["noise"]
     defined_in: 11
     scan: true
@@ -211,6 +230,7 @@ concepts:
       built to estimate or explain a relationship — how big an effect is,
       whether a change caused it (Chapters 8-10) — which is judged by a
       confidence interval rather than prediction on unseen data.
+    analogy: "A student judged on the exam, not on the homework they revised from."
     defined_in: 12
 
   - term: "batch model"
@@ -219,6 +239,7 @@ concepts:
       control, in an environment you control, producing a set of outputs
       and then stopping until next time — a churn list generated monthly,
       not a live decision made continuously.
+    analogy: "A monthly report, printed and left on a desk."
     depends_on: ["machine learning model"]
     defined_in: 12
 
@@ -228,6 +249,7 @@ concepts:
       predictions continuously and automatically as part of something
       being actively used, with no human reviewing each individual output
       before it takes effect.
+    analogy: "A thermostat: deciding all day, with nobody reading the output."
     depends_on: ["batch model"]
     defined_in: 12
 
@@ -237,6 +259,7 @@ concepts:
       Scoring brilliantly on the exact data a model was built from and
       considerably worse on anything new — memorising the specific data
       rather than learning the pattern underneath it.
+    analogy: "A student who memorised last year's exam paper."
     defined_in: 12
 
   - term: "held-out data"
@@ -245,6 +268,7 @@ concepts:
       A portion of the data set aside and never shown to a model while it
       is being built, used only afterward to check how it performs on
       cases it genuinely hasn't seen.
+    analogy: "The questions the student never saw while revising."
     depends_on: ["known-answer test", "overfitting"]
     defined_in: 12
 
@@ -254,6 +278,7 @@ concepts:
       scored, on which held-out data — not just the one that shipped. What
       tells you whether a winning attempt beat the field by a real margin
       or just got lucky on this particular split among many tries.
+    analogy: "The whole lab notebook, not just the page the result is on."
     depends_on: ["held-out data"]
     defined_in: 12
 
@@ -265,4 +290,5 @@ concepts:
       field are, the min and max of a numeric one — to catch a corrupted
       or inconsistent dataset before it quietly shapes every result built
       on top of it.
+    analogy: "Reading the labels before you unpack the shipment."
     defined_in: 13
