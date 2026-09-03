@@ -17,6 +17,12 @@
 kind: technical
 title: "Prompt to Evidence"
 
+# Chapter 14 teaches how to ask rather than a word to ask it with -- what a
+# complete request contains, and when the honest answer is to bring in a real expert.
+# Chapter 15 is the closing checklist and 16 the afterword: both recap the
+# book's vocabulary rather than extend it, so neither introduces a term.
+teaches_no_terms: [14, 15, 16]
+
 concepts:
 
   # ─── Chapter 1 — The Handoff ────────────────────────────────────────────
@@ -65,6 +71,24 @@ concepts:
       A condition that has to hold about the data for a method's output to
       mean what it claims to mean. Every method has some, stated or not.
     defined_in: 3
+    scan: true
+
+  # ─── Chapter 4 — Make It Compute, Not Guess ─────────────────────────────
+  - term: "computation"
+    definition: >-
+      Arithmetic done by pattern-matching instead of by running actual code.
+      The link in the chain where a confidently-delivered number can simply
+      be wrong, with nothing in the tone of the answer to say so.
+    analogy: >-
+      A calculator does not predict what 47 times 83 is; it computes it,
+      tracking every digit the same way on the millionth calculation as on
+      the first.
+    depends_on: ["number"]
+    defined_in: 4
+    # Not scanned: "computation" is ordinary English, and Chapter 1 uses it
+    # while naming the chain. Hunting for it would cry wolf on the book's own
+    # roadmap -- the exact false positive that teaches people to ignore a gate.
+    scan: false
 
   # ─── Chapter 5 — The Tool, Not the Answer ───────────────────────────────
   - term: "parameter"
@@ -73,6 +97,7 @@ concepts:
       a month, a segment, a threshold — kept separate from the logic that
       stays fixed regardless of what value is supplied.
     defined_in: 5
+    scan: true
 
   # ─── Chapter 6 — Borrowed, Not Reinvented ───────────────────────────────
   - term: "library"
@@ -85,6 +110,11 @@ concepts:
   # ─── Chapter 7 — Test It Against What You Already Know ──────────────────
   - term: "known-answer test"
     aka: ["sanity check"]
+    # "sanity check" earns its place in the glossary and not in the gate:
+    # Chapter 1 uses "sanity-check" as an ordinary English verb, which has
+    # nothing to do with this concept. Scanning only the distinctive name
+    # keeps the rule that works and drops the one that cries wolf.
+    scan: ["known-answer test"]
     definition: >-
       Running a method against a case where the correct result is already
       known, to check the method itself before trusting it on a case where
@@ -133,6 +163,7 @@ concepts:
       method for measuring impact is really a way of building a stand-in
       for the world you didn't get to see.
     defined_in: 9
+    scan: true
 
   - term: "confound"
     scan: true
@@ -168,6 +199,7 @@ concepts:
       moving together at all.
     depends_on: ["noise"]
     defined_in: 11
+    scan: true
 
   # ─── Chapter 12 — When the Agent Wants to Build a Model ──────────────────
   - term: "machine learning model"
