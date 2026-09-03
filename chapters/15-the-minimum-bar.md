@@ -40,7 +40,7 @@ Before a number drives a real decision. Grouped by what each part protects again
 
 ### If a model is involved
 
-- [ ] You know whether it's a batch model or an online one, and it's being handled accordingly — an online model gets this book's companion volume's full operational discipline on top, not just this book's (Chapter 12).
+- [ ] You know whether it's a batch model or an online one, and it's being handled accordingly — an online model gets the full operational discipline of *Prompt to Production* on top, not just this book's (Chapter 12).
 - [ ] It was evaluated on data it never saw during training, not the data it was built from (Chapter 12).
 - [ ] It clearly beats the simplest possible baseline — the complexity has earned its place (Chapter 12).
 
