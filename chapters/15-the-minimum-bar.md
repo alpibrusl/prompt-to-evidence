@@ -2,7 +2,7 @@
 
 This chapter is a checklist and an argument about it.
 
-The argument first, because a checklist you don't believe in is a checklist you'll skip the day it actually matters.
+The argument first because a checklist you don't believe in is a checklist you'll skip the day it actually matters.
 
 ## What "trustworthy" means
 

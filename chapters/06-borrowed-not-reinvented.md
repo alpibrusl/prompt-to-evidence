@@ -2,7 +2,7 @@
 
 Chapter 4 got the agent computing instead of guessing. Chapter 5 turned that computation into a reusable tool. This chapter is about whether the arithmetic inside it can actually be trusted — because ask Bellwood's agent to compute the confidence interval (Chapter 10) around that checkout number, or any correlation or regression, and it will very happily write the formula from scratch: clean code, a recognisable structure, a number that comes out the other end looking exactly like it should. Whether that formula is correct is a separate question, and "it looks right" is not evidence either way.
 
-## What a library actually is
+## What a library is
 
 A **library** is code someone else already wrote, tested, and published, so that using it does not require understanding — or reimplementing — everything happening inside it. `scipy`, `pandas`, `statsmodels`, `numpy`: these are not obscure specialist tools. They are the standard machinery most professional statistical and data work is built on, maintained by people whose whole job is getting this arithmetic right, used by enough people, on enough real datasets, that the sharp edges have mostly already been found by someone else, before you ever got there.
 

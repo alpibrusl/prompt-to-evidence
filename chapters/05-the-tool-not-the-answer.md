@@ -2,7 +2,7 @@
 
 Chapter 3 introduced the move: ask for the general method, and treat today's specific question as one input to it. This chapter is what that actually looks like in practice, and how to tell whether you got it.
 
-## The test that actually matters
+## The test that matters
 
 Here is the concrete question to ask about anything computed for you: **if next month arrived with different numbers, would this same code still work — or would someone have to go back in and edit it?**
 

@@ -14,7 +14,7 @@ Two moves matter more than the rest, and they sit right at the start of the chai
 
 The instinct, reasonably, is to answer the question in front of you: *what was our conversion rate last month.* Resist answering it directly. Ask instead: *what is the general method for computing a conversion rate, for any month, any segment* — and treat "last month" as simply the one input you happen to be running it against today.
 
-This is not pedantry. A calculation built to answer one specific question hides its own assumptions inside itself, because nothing forces them into the open. A general method has to state, out loud, what it needs: which column counts as a completed purchase, what counts as the denominator, what date range means "a month." Writing the general version is what makes those choices visible enough to check — and checkable is the entire subject of this book. Chapter 5 is this idea, in full, as the discipline for how the agent should actually work.
+This is not pedantry. A calculation built to answer one specific question hides its own assumptions inside itself because nothing forces them into the open. A general method has to state, out loud, what it needs: which column counts as a completed purchase, what counts as the denominator, what date range means "a month." Writing the general version is what makes those choices visible enough to check — and checkable is the entire subject of this book. Chapter 5 is this idea, in full, as the discipline for how the agent should actually work.
 
 ## Check that your data fits
 

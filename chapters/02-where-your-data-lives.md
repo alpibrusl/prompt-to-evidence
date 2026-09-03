@@ -4,7 +4,7 @@ Ask where the numbers came from and the honest answer is usually a shrug — *it
 
 ## The usual places
 
-**A spreadsheet** is the most familiar shape, and the most deceptive one, because every cell looks the same regardless of what put the value there. A cell can hold a number pulled fresh from a system this morning, or a number someone typed in by hand in March and never updated, or a formula referencing a cell three tabs away that got deleted last month and now silently returns zero. Nothing about how it looks tells you which.
+**A spreadsheet** is the most familiar shape, and the most deceptive one because every cell looks the same regardless of what put the value there. A cell can hold a number pulled fresh from a system this morning, or a number someone typed in by hand in March and never updated, or a formula referencing a cell three tabs away that got deleted last month and now silently returns zero. Nothing about how it looks tells you which.
 
 **A database** is what a live system actually reads and writes while it runs. You rarely see it directly — you send it a query, and it sends back rows. This is more reliable than a spreadsheet in one specific way, structure is enforced, but it introduces a failure mode spreadsheets don't have: the query itself can be wrong, quietly returning a real, correctly-formatted answer to a slightly different question than the one you meant to ask.
 
@@ -24,7 +24,7 @@ A million identical rows carry exactly as much information as one of them does. 
 
 **Noise** is random scatter around the true answer — one customer happens to spend more this week, another less, for reasons that wash out across enough of them. More data cures noise. Average enough noisy observations together and the randomness cancels itself out; that is, mechanically, why a bigger sample gives a more precise estimate.
 
-**Bias** is a systematic skew — a distortion that every single row carries in the same direction, because of *how* the data was collected rather than what happened to be measured. A survey that only reached people who opened an email is missing everyone who didn't, in the same direction, every time. More responses from that survey do not fix this. They give you a more precise, more confident estimate of the wrong thing.
+**Bias** is a systematic skew — a distortion that every single row carries in the same direction because of *how* the data was collected rather than what happened to be measured. A survey that only reached people who opened an email is missing everyone who didn't, in the same direction, every time. More responses from that survey do not fix this. They give you a more precise, more confident estimate of the wrong thing.
 
 This is the distinction to hold onto: **more data fixes noise. It does nothing whatsoever for bias.** A well-designed sample of five thousand people, chosen so every group you care about is properly represented, can be worth more than five million rows scraped from whoever happened to click something. Chapters 8 and 9 are largely about spotting bias hiding inside a comparison that otherwise looks perfectly clean.
 
