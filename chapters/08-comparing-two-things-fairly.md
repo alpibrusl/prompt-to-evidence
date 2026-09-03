@@ -2,7 +2,7 @@
 
 Back to the opening example: did Bellwood's new checkout page actually beat the old one. Everything in this chapter is what has to be true for "conversion is up 20%" to mean what it sounds like it means, rather than being a number that happened to come out of a comparison that was never fair to begin with.
 
-## What "fair" actually requires
+## What "fair" requires
 
 A comparison is fair when the two groups differ in exactly one thing: the change you're testing. Everything else about them — who they are, when they arrived, what else was happening at the time — has to be, as close as possible, the same.
 
@@ -39,7 +39,7 @@ Even with a genuinely fair comparison, one more question has to be answered befo
 
 This is Chapter 2's noise, reappearing in its most consequential form. Flip a coin twenty times and you will rarely get exactly ten heads — small, meaningless wobbles are the normal behaviour of anything measured on a limited sample, not evidence of anything. **Statistical significance** is the answer to a precise question: if the two versions truly made no difference at all, how surprising would a gap this size actually be? A result is called significant when the honest answer is *quite surprising* — when a gap this large would be unlikely to appear from noise alone.
 
-Two things about this are worth being exact on, because both are commonly gotten backwards. Significance is not a measure of how big or important the effect is — a tiny, commercially irrelevant difference can be statistically significant if the sample is large enough, and a large, genuinely important one can fail to reach significance if the sample is small. And significance is not the probability that the effect is real — it's the probability of seeing a gap this size *if there were truly no effect at all*, which is a related but distinctly different question from the one people usually think they're asking.
+Two things about this are worth being exact on because both are commonly gotten backwards. Significance is not a measure of how big or important the effect is — a tiny, commercially irrelevant difference can be statistically significant if the sample is large enough, and a large, genuinely important one can fail to reach significance if the sample is small. And significance is not the probability that the effect is real — it's the probability of seeing a gap this size *if there were truly no effect at all*, which is a related but distinctly different question from the one people usually think they're asking.
 
 Sample size is what connects this back to Chapter 2 directly: more data reduces noise, which is exactly why a small test struggles to tell a real small effect apart from a lucky fluctuation, and a larger one can. If you're testing something you expect to move the number only slightly, you need more data to see it clearly than if you're testing something you expect to move it dramatically — ask what size of effect the test is actually built to detect, not just whether it ran long enough to feel thorough.
 

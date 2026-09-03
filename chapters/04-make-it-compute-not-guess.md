@@ -1,6 +1,6 @@
 # Make It Compute, Not Guess
 
-Chapter 3 named the computation link in the chain, and gave it one line: arithmetic done by pattern-matching instead of by running actual code. This chapter is that line, in full, because it is the single most avoidable way a number in this book's sense fails to become one.
+Chapter 3 named the computation link in the chain, and gave it one line: arithmetic done by pattern-matching instead of by running actual code. This chapter is that line, in full because it is the single most avoidable way a number in this book's sense fails to become one.
 
 ## Why the agent is worst at exactly the thing it sounds most confident about
 
@@ -16,7 +16,7 @@ Asking the agent to "double-check" or "be careful" does not reliably help, becau
 
 The actual fix is not more care. It is a different method entirely: **have the agent write code that performs the calculation, and run it, rather than asking it to state the result of a calculation directly.** Code execution has the property text generation doesn't — a script that computes a percentage does the arithmetic the same mechanical way every single time, regardless of how plausible or implausible the answer looks. This is not a nicer way of getting the same thing. It is a categorically different process, and it is the one that actually deserves your trust.
 
-## What "trivial" actually means
+## What "trivial" means
 
 This does not mean demanding a Python script to answer "how many rows are in this file." That is retrieval, not inference — the agent is reading a count, not deriving one through several steps of reasoning, and the risk this chapter is about does not apply to it in the same way.
 

@@ -84,10 +84,17 @@ build works without them; CI installs them and builds all three formats.
 ## The concept ledger and the gate
 
 Same mechanism as *Prompt to Production*: `glossary.yaml` is the canon,
-`scripts/check_terms.py` lints the manuscript against it and fails the build
-if a term is used before its chapter defines it, and `GLOSSARY.md` is
-generated rather than hand-written. See that book's README for the full
-mechanics — this repository's tooling is a direct copy, unmodified.
+`bookkit check terms` lints the manuscript against it and fails the build if
+a term is used before its chapter defines it, and `GLOSSARY.md` is generated
+by `bookkit glossary` rather than hand-written.
+
+The gate used to be a `scripts/` directory copied byte for byte into each of
+the four books. It now lives upstream in
+[bookkit](https://github.com/alpibrusl/content-kit) — one implementation, four
+books, no copies to keep in step — so this repository holds only what is
+actually specific to this volume: the manuscript, its ledger, and its
+`verify-*` skill. Full design:
+[`docs/ledger.md`](https://github.com/alpibrusl/content-kit/blob/main/packages/bookkit/docs/ledger.md).
 
 ## Licence
 

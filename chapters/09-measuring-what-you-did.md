@@ -12,7 +12,7 @@ That second sentence is the entire chapter. The first one answers a question nob
 
 A **counterfactual** is what would have happened if the thing you did had not happened — the sales you would have gotten with no campaign at all, running in parallel to the world where you ran one. This is the fundamental difficulty underneath everything in this chapter: you never get to observe it directly. You only ever see the one world that actually happened. Every method in this chapter is really a different way of building a stand-in for the world you didn't get to see.
 
-Before-and-after uses last month as that stand-in, silently. It is usually a poor one, because most businesses were already moving up or down for reasons that have nothing to do with this particular campaign — growth, season, a slow general trend — and before-and-after credits all of that movement to whatever changed most recently.
+Before-and-after uses last month as that stand-in, silently. It is usually a poor one because most businesses were already moving up or down for reasons that have nothing to do with this particular campaign — growth, season, a slow general trend — and before-and-after credits all of that movement to whatever changed most recently.
 
 ## What quietly explains it instead
 

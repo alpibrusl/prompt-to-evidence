@@ -1,6 +1,6 @@
 # Test It Against What You Already Know
 
-Every chapter so far has been about reducing the chance a method is wrong. This one is about catching it anyway, because reducing the chance is never the same thing as reaching zero, and the last line of defence is the cheapest one in this entire book.
+Every chapter so far has been about reducing the chance a method is wrong. This one is about catching it anyway because reducing the chance is never the same thing as reaching zero, and the last line of defence is the cheapest one in this entire book.
 
 ## The known-answer test
 
@@ -26,9 +26,9 @@ Treat both the same way. **A suspiciously good result and a suspiciously bad res
 
 The reasoning underneath this is not superstition, it's arithmetic about how often things actually happen. Genuinely enormous effects are rare — most real changes to most real systems move a number by a few percent, not by a factor of three. Bugs and data problems, on the other hand, are common; a leaked answer, a double-counted row, a comparison that silently wasn't fair, all of these are far more frequent events than a real result several times larger than anything you've seen before. When a result is extreme, the honest calculation is that it is more likely to be one of the common causes wearing an exciting costume than a rare, genuine breakthrough wearing an ordinary one. Chapters 9 and 12 will each hand you a version of this exact moment — a campaign that appears to have caused a startling lift, an ML model that reports startling accuracy — and the instruction there will be the same one this chapter is giving you now: extraordinary looks, on either end, earn extra scrutiny, not extra trust.
 
-The failure mode to watch for in yourself is asymmetric relief: quietly re-checking the bad-looking results harder than the good-looking ones, because the good ones feel like they've already earned belief. They haven't. A number that flatters what you were hoping for is not thereby more likely to be correct.
+The failure mode to watch for in yourself is asymmetric relief: quietly re-checking the bad-looking results harder than the good-looking ones because the good ones feel like they've already earned belief. They haven't. A number that flatters what you were hoping for is not thereby more likely to be correct.
 
-## What checking actually looks like
+## What checking looks like
 
 Chapter 3 already gave you the diagnostic habit — the *shape* of a wrong-feeling result points at a different link in the chain. For the extreme case specifically: a suspiciously good result, check the data and the assumptions behind the method first — something is probably leaking into the answer that shouldn't be there. A suspiciously bad one, check the computation first — something in the arithmetic likely broke. For an ordinary-looking result that simply failed a consistency check, the diagnostic habit is the same one, applied more broadly: find the specific link where the two disagreeing numbers diverge, rather than assuming the newer or less-trusted one is automatically the culprit.
 
