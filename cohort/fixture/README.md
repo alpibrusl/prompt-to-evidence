@@ -86,7 +86,7 @@ recoverable only by actually running the numbers):
   comparison lands at about **+3.9 points** (18.8% → 22.7%, or +21%
   relative — the memo's "up 20%"); a trend-extrapolated counterfactual
   leaves about **+2.8 points**; the honest randomized retest lands at
-  **+2.0 points** (22.0% → 24.0%), with a 95% confidence interval of
+  **+2.0 points** (21.1% → 23.1%), with a 95% confidence interval of
   roughly +0.2 to +3.8 — excluding zero, but only just, and wide enough to
   be worth actually reporting as a range. That is the number in Chapter
   10, and the reason the retest's control arm sits above the launch-day

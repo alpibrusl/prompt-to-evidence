@@ -86,6 +86,22 @@ LAUNCH_DATE = date(2026, 3, 15)
 DAILY_VISITS_MEAN = 5000
 DAILY_VISITS_SD = 300
 
+# The retest draws from its own stream. Everything above it is the naive
+# before/after story and the Session 7 customer sample, and tuning the retest
+# must not disturb either -- the facilitator notes quote their numbers. A
+# separate seed also makes the retest tunable at all: with 21 days and two
+# arms, the realized difference is set by a few dozen normal variates, so
+# raising the arm sizes does not average an unlucky draw away, it just
+# reproduces the same standardized deviation at a larger scale.
+#
+# Seed 19 realizes control 21.13%, treatment 23.14% -- a difference of exactly
+# +2.00 points, matching the memo, inside a 95% interval of [+0.22, +3.79].
+# That interval is the point: it excludes zero, so the retest genuinely found
+# the effect, and it is wide enough to be a real range rather than a rounding
+# error, which is what Chapter 10 asks the reader to notice about a headline
+# quoted as a single number.
+RETEST_SEED = 19
+
 RETEST_START = date(2026, 5, 4)   # after the naive numbers had already
 RETEST_DAYS = 21                   # circulated — the "wait, let's do this
 RETEST_ARM_VISITS_MEAN = 200       # properly" retest, on a small holdout,
@@ -285,7 +301,7 @@ def main() -> None:
     write_customers(rng, out)
     write_deploy_notes(out)
     write_retest_headline(out)
-    write_retest_daily(rng, out)
+    write_retest_daily(random.Random(RETEST_SEED), out)
 
     print(f"generated fixture at {out}")
     print("start students on headline-report.md + checkout_daily.csv — nothing else, cold")
