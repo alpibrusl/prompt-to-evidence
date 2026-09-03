@@ -211,6 +211,7 @@ sessions:
         unique values per category column, min/max per numeric column,
         whether the missingness looks random or related to the outcome —
         before answering any question about churn risk itself.
+      fixture_ref: "fixture/generate_bellwood_data.py"
     checkpoint: >-
       Identifies at least one category-spelling inconsistency by name, and
       correctly states that the missing satisfaction values are not

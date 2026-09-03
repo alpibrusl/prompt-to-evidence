@@ -42,6 +42,8 @@ same way `build/` stays out of the book's own.
 - **`retest-headline.md`** — the honest follow-up: "up 2 percentage
   points," with no range attached. Chapter 10's whole subject — a point
   estimate is not yet the same claim as a range.
+- **`customers.csv`** — 400 customer rows for Session 7, to profile before
+  trusting. Nothing in the file says what is wrong with it.
 - **`retest_daily.csv`** — the raw daily counts behind the honest retest: a
   real randomly-assigned holdout, control against treatment, small enough
   that the range around "2 points" is a genuine range and not a rounding
