@@ -91,6 +91,31 @@ RETEST_DAYS = 21                   # circulated — the "wait, let's do this
 RETEST_ARM_VISITS_MEAN = 200       # properly" retest, on a small holdout,
 RETEST_ARM_VISITS_SD = 25          # not the whole site
 
+# --- Session 7: the customer sample to profile before trusting -------------
+# Session 7 asks students to profile a customer table before answering any
+# question about churn, and there was no customer table: the exercise had no
+# data at all. Two things are planted, neither announced anywhere the student
+# can read.
+#
+# The country field carries the same countries spelled several ways, so a
+# naive "unique values" count reports far more countries than exist.
+#
+# And the satisfaction score is missing far more often for customers who went
+# on to churn -- 60% against 8%. That is the checkpoint: missingness that
+# lines up with the outcome being predicted is not missing at random, and a
+# model trained on the rows that survive a dropna() has been handed the answer.
+CUSTOMER_COUNT = 400
+CHURN_RATE = 0.22
+COUNTRY_SPELLINGS = {
+    "United States": ["United States", "USA", "us", "U.S.", "united states"],
+    "United Kingdom": ["United Kingdom", "UK", "gb", "Great Britain"],
+    "Germany": ["Germany", "DE", "germany"],
+    "Spain": ["Spain", "ES"],
+    "Netherlands": ["Netherlands", "NL", "netherlands"],
+}
+SURVEY_MISSING_IF_CHURNED = 0.60
+SURVEY_MISSING_IF_RETAINED = 0.08
+
 
 def sample_conversions(rng: random.Random, visits: int, rate: float) -> int:
     """Binomial-ish sample via a normal approximation — good enough for
@@ -140,6 +165,48 @@ def write_retest_daily(rng: random.Random, out: Path) -> None:
         w.writerow(["date", "group", "visits", "completed_orders", "conversion_rate"])
         for d, group, visits, conversions in rows:
             w.writerow([d.isoformat(), group, visits, conversions, round(conversions / visits, 4)])
+
+
+def write_customers(rng: random.Random, out: Path) -> None:
+    """The Session 7 sample: 400 customer rows to profile before trusting."""
+    countries = list(COUNTRY_SPELLINGS)
+    rows = []
+    for i in range(1, CUSTOMER_COUNT + 1):
+        churned = rng.random() < CHURN_RATE
+        canonical = rng.choice(countries)
+        spelling = rng.choice(COUNTRY_SPELLINGS[canonical])
+        missing = SURVEY_MISSING_IF_CHURNED if churned else SURVEY_MISSING_IF_RETAINED
+        if rng.random() < missing:
+            satisfaction = ""
+        else:
+            # Churners who did answer skew lower, but not so much that the
+            # score alone would carry a model -- the missingness is the finding.
+            centre = 5.8 if churned else 7.6
+            satisfaction = round(min(10.0, max(1.0, rng.gauss(centre, 1.4))), 1)
+        rows.append(
+            (
+                f"C{i:04d}",
+                spelling,
+                rng.choice([1, 3, 6, 12, 24]),
+                round(max(0.0, rng.gauss(240 if churned else 410, 120)), 2),
+                satisfaction,
+                "yes" if churned else "no",
+            )
+        )
+
+    with (out / "customers.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(
+            [
+                "customer_id",
+                "country",
+                "tenure_months",
+                "lifetime_value_eur",
+                "satisfaction_score",
+                "churned",
+            ]
+        )
+        w.writerows(rows)
 
 
 def write_headline_report(out: Path) -> None:
@@ -215,6 +282,7 @@ def main() -> None:
     rng = random.Random(SEED)
     write_headline_report(out)
     write_checkout_daily(rng, out)
+    write_customers(rng, out)
     write_deploy_notes(out)
     write_retest_headline(out)
     write_retest_daily(rng, out)
