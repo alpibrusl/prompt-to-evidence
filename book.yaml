@@ -34,24 +34,24 @@ chapters:
   # convention in prompt-to-production's book.yaml. The Markdown source
   # keeps its own plain H1.
   # Part I — The Ground
-  - { file: chapters/01-the-handoff.md,                title: "Chapter 1 — The Handoff" }
+  - { file: chapters/01-the-handoff.md,                title: "Chapter 1 — The Handoff", part: "Part I — The Ground" }
   - { file: chapters/02-where-your-data-lives.md,       title: "Chapter 2 — Where Your Data Actually Lives" }
   - { file: chapters/03-the-shape-of-an-analysis.md,    title: "Chapter 3 — The Shape of an Analysis" }
   # Part II — Trusting the Number
-  - { file: chapters/04-make-it-compute-not-guess.md,   title: "Chapter 4 — Make It Compute, Not Guess" }
+  - { file: chapters/04-make-it-compute-not-guess.md,   title: "Chapter 4 — Make It Compute, Not Guess", part: "Part II — Trusting the Number" }
   - { file: chapters/05-the-tool-not-the-answer.md,      title: "Chapter 5 — The Tool, Not the Answer" }
   - { file: chapters/06-borrowed-not-reinvented.md,      title: "Chapter 6 — Borrowed, Not Reinvented" }
   - { file: chapters/07-test-it-against-what-you-know.md, title: "Chapter 7 — Test It Against What You Already Know" }
   # Part III — Making the Decision
-  - { file: chapters/08-comparing-two-things-fairly.md, title: "Chapter 8 — Comparing Two Things Fairly" }
+  - { file: chapters/08-comparing-two-things-fairly.md, title: "Chapter 8 — Comparing Two Things Fairly", part: "Part III — Making the Decision" }
   - { file: chapters/09-measuring-what-you-did.md,      title: "Chapter 9 — Measuring What You Did" }
   - { file: chapters/10-confidence-not-certainty.md,    title: "Chapter 10 — Confidence, Not Certainty" }
   # Part IV — Seeing and Learning
-  - { file: chapters/11-a-chart-is-a-claim.md,          title: "Chapter 11 — A Chart Is a Claim" }
+  - { file: chapters/11-a-chart-is-a-claim.md,          title: "Chapter 11 — A Chart Is a Claim", part: "Part IV — Seeing and Learning" }
   - { file: chapters/12-when-the-agent-wants-to-build-a-model.md, title: "Chapter 12 — When the Agent Wants to Build a Model" }
   - { file: chapters/13-data-you-can-trust.md,          title: "Chapter 13 — Data You Can Trust" }
   # Part V — Working With the Agent
-  - { file: chapters/14-asking-the-right-question.md,   title: "Chapter 14 — Asking the Right Question" }
+  - { file: chapters/14-asking-the-right-question.md,   title: "Chapter 14 — Asking the Right Question", part: "Part V — Working With the Agent" }
   - { file: chapters/15-the-minimum-bar.md,             title: "Chapter 15 — The Minimum Bar" }
   # Afterword. Deliberately left unnumbered, like the equivalent chapter in
   # prompt-to-production — see "The afterword is a real chapter, not front
