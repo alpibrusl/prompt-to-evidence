@@ -12,6 +12,13 @@ sessions:
       spreadsheet, database, API, log stream — and which specific failure
       mode belongs to each one, so "it's in the system" stops being an
       answer anyone in the room accepts from themselves.
+    solo: >-
+      Run the six-link chain against a number you were handed recently at
+      work — a dashboard figure, a percentage in a deck — writing out
+      question, data, method, computation, number, decision, and marking
+      which links you can actually account for. Then find where that
+      number's data really lives, and name the failure mode belonging to
+      that place rather than to data in general.
     exercise:
       name: "Find the weak joint"
       description: >-
@@ -36,6 +43,13 @@ sessions:
       script wired to one specific month and segment into a real tool with
       parameters, and ask it, on camera, to name the specific library doing
       the statistics inside it rather than a hand-rolled formula.
+    solo: >-
+      This session loses least alone, because the live demo is a demo you
+      can run. Ask an agent for the same two-step percentage twice —
+      narrated in a sentence, then as code it actually executes — and
+      compare the two answers yourself. Then have it turn a script wired to
+      one month and one segment into one that takes both as parameters, and
+      make it name the library doing the statistics.
     exercise:
       name: "Build the general tool"
       description: >-
@@ -63,6 +77,13 @@ sessions:
       suspiciously bad one side by side and practice treating them
       identically, out loud, rather than celebrating one and doubting the
       other.
+    solo: >-
+      Build the known-answer case and run it against your Session 2 tool as
+      written. What does not survive alone is the second half: treating a
+      suspiciously good result and a suspiciously bad one identically is
+      easy to say and hard to do, and a room catches you failing at it.
+      Write both verdicts down before you check either. The record is what
+      stops you quietly revising the flattering one.
     exercise:
       name: "Known-answer test"
       description: >-
@@ -84,6 +105,12 @@ sessions:
       quietly manufacture a significant-looking result: stopping the moment
       it looks good, and testing many things and reporting the one that
       worked.
+    solo: >-
+      Generate the fixture and do not read its README. This exercise depends
+      on meeting headline-report.md and checkout_daily.csv cold, which is
+      easier alone than in a room — nobody else's reaction can give it away.
+      Give yourself twenty minutes and write down what is wrong with the
+      comparison before reading anything further.
     exercise:
       name: "First meeting with the fixture"
       description: >-
@@ -119,6 +146,12 @@ sessions:
       ways to build a fair comparison after the fact — randomized holdout,
       comparable unaffected group, extrapolated prior trend — ranked
       honestly from strongest to weakest evidence.
+    solo: >-
+      Add deploy-notes.md and continue exactly as written. Then take a
+      change your own organisation shipped recently — a launch, a price
+      change, a campaign — and write down what you would compare it against,
+      and which of the three fair comparisons you could actually build from
+      data that already exists.
     exercise:
       name: "Read the deploy notes"
       description: >-
@@ -158,6 +191,13 @@ sessions:
       result drawn two ways — the truncated 20–24% axis it was actually
       shown with, and a full-range axis — and ask, as a group, whether the
       story changes.
+    solo: >-
+      Compute the point estimate and the interval from retest_daily.csv
+      yourself, and do it before opening Appendix A. That appendix works
+      this same analysis end to end and is effectively the answer key;
+      reading it first costs you the exercise. Redraw the chart both ways
+      afterwards and decide, in writing, whether the truncated axis you were
+      originally shown was misleading.
     exercise:
       name: "Compute the range, then redraw the chart"
       description: >-
@@ -201,6 +241,12 @@ sessions:
       category column, actual min and max in a numeric one, and whether a
       pattern of missing data lines up suspiciously well with the outcome
       being predicted.
+    solo: >-
+      Profile the provided sample as written, then do it again on a real
+      table you have access to at work. The fixture's problems are findable
+      because somebody planted them; the part worth having is discovering
+      that your own data has its own, which nobody planted and nobody has
+      looked for.
     exercise:
       name: "Profile before you trust it"
       description: >-
@@ -234,6 +280,13 @@ sessions:
       points, the range around it — naming exactly how many of this
       cohort's own sessions that one number actually needed before it was
       evidence rather than a plausible sentence.
+    solo: >-
+      There is no room to rewrite the request in front of. Do it in writing:
+      take a vague question you actually asked an agent recently and rebuild
+      it with every checkable clause stated up front. Then walk Chapter 15's
+      checklist against Bellwood's own journey and count honestly how many
+      of these eight sessions that one number needed before it was evidence
+      rather than a plausible sentence.
     checkpoint: >-
       A specific, honest finding presented to the group — not a clean bill
       of health, and not a wall of unconfirmed items either.
