@@ -1,6 +1,7 @@
 # Build artifacts. The manuscript is the source; these are derived.
 build/
 GLOSSARY.md
+WORKED-EXAMPLE.md
 
 # The cohort's generated fixture data -- fixture/generate_bellwood_data.py
 # is the source.

@@ -4,16 +4,17 @@
 # This file is also, deliberately, the smallest honest example of what the book
 # describes: one command, same result on any machine, nothing built by hand.
 
-.PHONY: help glossary check prose prose-fix build epub pdf html audiobook clean all cohort-check cohort-build
+.PHONY: help glossary example check prose prose-fix build epub pdf html audiobook clean all cohort-check cohort-build
 
 help:
 	@echo "make glossary      regenerate GLOSSARY.md from glossary.yaml"
+	@echo "make example       regenerate WORKED-EXAMPLE.md from the cohort fixture"
 	@echo "make check         lint the manuscript against the concept ledger"
 	@echo "make prose         report house-style notes (warnings only)"
 	@echo "make prose-fix     apply the mechanical style corrections"
-	@echo "make epub          build the EPUB (implies glossary)"
-	@echo "make pdf           build the PDF  (implies glossary)"
-	@echo "make html          build a single-file HTML (implies glossary)"
+	@echo "make epub          build the EPUB (implies glossary + example)"
+	@echo "make pdf           build the PDF  (implies glossary + example)"
+	@echo "make html          build a single-file HTML (implies glossary + example)"
 	@echo "make all           check + build all three formats"
 	@echo "make cohort-check  lint the cohort curriculum against this book's chapters"
 	@echo "make cohort-build  build the cohort student handout + facilitator guide"
@@ -23,6 +24,12 @@ help:
 # bookkit -- this book supplies only the data they read (glossary.yaml).
 glossary:
 	@bookkit glossary -b .
+
+# Appendix A is derived from cohort/fixture/generate_bellwood_data.py, the same
+# generator the bootcamp runs. Hand-writing those figures would let the book and
+# the fixture drift apart silently, which is the failure this book is about.
+example:
+	@python3 scripts/build_worked_example.py
 
 check:
 	@bookkit check terms -b .
@@ -36,7 +43,7 @@ prose:
 prose-fix:
 	@bookkit check prose -b . --fix
 
-epub: glossary
+epub: glossary example
 	@bookkit build -f epub
 
 # WeasyPrint loads Pango through the dynamic linker. On macOS, System
@@ -45,10 +52,10 @@ epub: glossary
 # installs as are protected. So exporting DYLD_FALLBACK_LIBRARY_PATH before
 # `make pdf` has no effect, and the failure claims libgobject is missing on a
 # machine where it is installed. Calling the module directly skips both shims.
-pdf: glossary
+pdf: glossary example
 	@$(if $(wildcard /opt/homebrew/lib/libgobject-2.0.dylib),DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib ,)python3 -c "from bookkit.cli import app; app()" build -f pdf
 
-html: glossary
+html: glossary example
 	@bookkit build -f html
 
 build: epub
@@ -68,7 +75,7 @@ audiobook-plan:
 	@bookkit audiobook -b . --dry-run || [ $$? -eq 9 ]
 
 clean:
-	@rm -rf build GLOSSARY.md cohort/build
+	@rm -rf build GLOSSARY.md WORKED-EXAMPLE.md cohort/build
 	@echo "cleaned"
 
 # The cohort curriculum -- see cohort/README.md. Needs cohortkit:

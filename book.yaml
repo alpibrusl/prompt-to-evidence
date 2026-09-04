@@ -72,7 +72,10 @@ back_matter:
   # How to install the skill this book ships with. Back matter rather than a
   # chapter: it is a reference a reader returns to once, not something the
   # argument depends on.
-  - { file: RUNNING-THE-SKILL.md, title: "Appendix — Running the Skill" }
+  # Generated from the cohort fixture by `make example` — do not edit by hand.
+  # The book's numbers and the bootcamp's are the same numbers by construction.
+  - { file: WORKED-EXAMPLE.md, title: "Appendix A — One Analysis, Worked Through" }
+  - { file: RUNNING-THE-SKILL.md, title: "Appendix B — Running the Skill" }
   # Generated from glossary.yaml by `make glossary` — do not edit by hand.
   - { file: GLOSSARY.md, title: "Glossary" }
   - about_author
