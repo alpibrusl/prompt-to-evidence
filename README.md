@@ -72,8 +72,8 @@ from the source, never committed, rebuilt on demand. This is
 this book's companion volumes.
 
 ```bash
-pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
-pip install "bookkit[epub] @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/bookkit"
+pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@v0.2.0#subdirectory=packages/core"
+pip install "bookkit[epub] @ git+https://github.com/alpibrusl/content-kit@v0.2.0#subdirectory=packages/bookkit"
 
 make check     # lint the manuscript against the concept ledger
 make epub      # → build/prompt-to-evidence.epub
