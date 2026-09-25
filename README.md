@@ -2,6 +2,8 @@
 
 **The data literacy your AI agent assumes you already know.**
 
+Read it online: <https://alpibrusl.github.io/prompt-to-evidence/>
+
 A short book for people who are not experts in math or statistics but need
 to make decisions from data — in economics, science, marketing, wherever an
 agent can now produce a number on request. Reading an A/B test result,
