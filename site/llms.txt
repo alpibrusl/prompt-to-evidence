@@ -1,0 +1,15 @@
+# Prompt to Evidence
+
+> The data literacy your AI agent assumes you already know — for people who are not experts in math or statistics but need to make decisions from data, in economics, science, or marketing, wherever an agent can now produce a number on request.
+
+## Book
+
+- [Prompt to Evidence](https://alpibrusl.github.io/prompt-to-evidence/book.html): The full manuscript, sixteen chapters, teaching analytical discipline for people who are not mathematicians.
+
+## Cohort
+
+- [Student handout](https://alpibrusl.github.io/prompt-to-evidence/handout.html): The exercises and sessions built from this book, for anyone running or taking the cohort.
+
+## Series
+
+One of three companions to [Prompt to Production](https://alpibrusl.github.io/prompt-to-production/) — same voice, same tooling, different subject each time. [Prompt to Ledger](https://alpibrusl.github.io/prompt-to-ledger/) is financial discipline; [Prompt to Decision](https://alpibrusl.github.io/prompt-to-decision/) sits above all three.
